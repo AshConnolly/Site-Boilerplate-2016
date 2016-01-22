@@ -1,0 +1,16 @@
+.DS_Store
+*.log
+node_modules
+build
+*.node
+components
+coverage
+*.orig
+.idea
+sandbox
+test/out-fixtures/*
+test/watch-*.txt
+gulp.1
+.sublime-gulp.cache
+.sublime-project
+.sublime-workspace

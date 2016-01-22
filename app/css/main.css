@@ -1,0 +1,686 @@
+* {color:red !important;}
+.blue {
+  color: #3278BB; }
+
+.orange {
+  color: #E47923; }
+
+.darkgrey {
+  color: #3D3D44; }
+
+.grey {
+  color: #616167; }
+
+.lightgrey {
+  color: #EEEEEE; }
+
+.vlightgrey {
+  color: #F4F4F4; }
+
+.bluebg {
+  background: #3278BB; }
+
+.orangebg {
+  background: #E47923; }
+
+.darkgreybg {
+  background: #3D3D44; }
+
+.greybg {
+  background: #616167; }
+
+.lightgreybg {
+  background: #EEEEEE; }
+
+.vlightgreybg {
+  background: #F4F4F4; }
+
+.robolight {
+  font: 'Roboto Slab', Helvetica, Arial;
+  color: #6D6E70;
+  font-weight: 300; }
+
+/*@mixin mq ($property, $value) {
+	@media only screen and ($property:$value) {
+	@content;
+	}
+}
+
+@include mq ('min-width',600px){
+h1{color: $blue;}
+}
+*/
+html, body {
+  height: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #fff; }
+
+/*::selection {
+    background: #F0B981;
+}
+::-moz-selection {
+    background: #F0B981;
+} */
+/*======= RESETS ==========*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0b1 | 201101 
+   NOTE: WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+/*html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}*/
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+ins, a {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  -ms-interpolation-mode: bicubic;
+  /* image scaling IE fix */
+  max-width: 100%;
+  height: auto !important;
+  display: block; }
+
+/*==========*/
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+/*========helper classes =========*/
+.clear {
+  clear: both; }
+
+.hide {
+  display: none; }
+
+.clickable {
+  cursor: pointer; }
+
+.center {
+  text-align: center; }
+
+.left {
+  float: left !important; }
+
+.right {
+  float: right !important; }
+
+.end {
+  margin-right: 0 !important; }
+
+.bottom {
+  margin-bottom: 0 !important; }
+
+.center-container {
+  position: relative; }
+
+.abcenter {
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.abcenter-modern {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  text-align: center; }
+
+.flipHorz {
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  -webkit-filter: FlipH;
+          filter: FlipH; }
+
+.eq_dist {
+  text-align: justify; }
+  .eq_dist:after {
+    content: '';
+    width: 100%;
+    display: inline-block; }
+  .eq_dist > a, .eq_dist > p, .eq_dist > img {
+    display: inline-block;
+    vertical-align: middle; }
+
+.table {
+  display: table; }
+
+.tablecell {
+  display: table-cell;
+  vertical-align: middle; }
+
+.horz-center-parent {
+  width: 100%; }
+
+.horz-center {
+  display: table;
+  margin: 0 auto; }
+
+.align-right {
+  text-align: right; }
+
+.inline {
+  display: inline !important; }
+
+.inline-block {
+  display: inline-block !important; }
+
+.block {
+  display: block !important; }
+
+* {
+  -webkit-tap-highlight-color: transparent; }
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0; }
+
+/* Clearfix http:/nicolasgallagher.com/micro-clearfix-hack/ */
+.cf:before, .cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.lte-ie7 .cf {
+  *zoom: 1; }
+
+@font-face {
+  font-family: 'ProximaNovaRegular';
+  src: url("../inc/fonts/proximanova-regular-webfont.eot");
+  src: url("../inc/fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../inc/fonts/proximanova-regular-webfont.woff") format("woff"), url("../inc/fonts/proximanova-regular-webfont.ttf") format("truetype"), url("../inc/fonts/proximanova-regular-webfont.svg#ProximaNovaRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ProximaNovaLight';
+  src: url("../inc/fonts/proximanova-light-webfont.eot");
+  src: url("../inc/fonts/proximanova-light-webfont.eot?#iefix") format("embedded-opentype"), url("../inc/fonts/proximanova-light-webfont.woff") format("woff"), url("../inc/fonts/proximanova-light-webfont.ttf") format("truetype"), url("../inc/fonts/proximanova-light-webfont.svg#ProximaNovaLight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/*================= FONT STYLING ================*/
+html {
+  font-size: 62.5%; }
+
+body {
+  font: 10px/1.5 'ProximaNovaLight', sans-serif;
+  font-size: 1rem; }
+
+h1, h2, h3, h4, h5, p, li, blockquote, a {
+  margin: 0; }
+
+p, li, blockquote, a {
+  font: 14px/1.6 'ProximaNovaLight', sans-serif;
+  font-size: 1.4rem;
+  color: #6D6E70; }
+
+h1, h2, h3, h4, h5 {
+  font: 14px/1.4 'Roboto Slab', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #6D6E70; }
+
+a, li {
+  color: #6D6E70; }
+
+h1 {
+  font-size: 2.8rem; }
+
+h2 {
+  font-size: 2.8rem; }
+
+h3 {
+  font-size: 2.2rem; }
+
+h4 {
+  font-size: 2rem; }
+
+h5 {
+  font-size: 1.8rem; }
+
+li, p, blockquote, a {
+  font-size: 1.4rem;
+  color: #6D6E70; }
+
+blockquote p {
+  font-size: 1rem; }
+
+p a {
+  color: #3278BB;
+  text-decoration: underline; }
+
+ol {
+  list-style-position: inside;
+  list-style: disc; }
+
+ol li {
+  line-height: 2rem; }
+  ol li ol {
+    margin-left: 1rem;
+    margin-bottom: 0; }
+
+.datalist {
+  list-style-position: inside;
+  list-style-type: disc; }
+
+.datalist li {
+  line-height: 2rem; }
+  .datalist li ul {
+    margin-left: 1rem;
+    margin-bottom: 0; }
+
+ol.numberedlist {
+  list-style: decimal;
+  margin: 0 0 3rem 2rem; }
+  ol.numberedlist ol {
+    list-style: decimal; }
+
+.color-highlight {
+  color: #D12054; }
+
+/*Nav font size set*/
+/* header nav > ul > li {font-size: 1.4rem;}
+header nav ul li a {font-size: 1rem;}
+header nav ul li a p {font-size: 1rem;}
+header nav ul li ul li  {font-size: 1rem;} */
+/* Attribute selector */
+[class*='bit-'] {
+  float: left;
+  padding: 15px; }
+
+/* Floats last ".bit-" to the right */
+[class*='bit-']:last-of-type {
+  padding-right: 15px;
+  float: right; }
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  /* width fix */ }
+
+/* Clearfix */
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.bit-100 {
+  width: 100%; }
+
+.bit-75 {
+  width: 100%; }
+
+.bit-60 {
+  width: 100%; }
+
+.bit-50 {
+  width: 100%; }
+
+.bit-40 {
+  width: 100%; }
+
+.bit-33 {
+  width: 100%; }
+
+.bit-25 {
+  width: 100%; }
+
+.bit-20 {
+  width: 100%; }
+
+@media only screen and (min-width: 600px) {
+  .bit-100 {
+    width: 100%; }
+  .bit-75 {
+    width: 100%; }
+  .bit-60 {
+    width: 60%; }
+  .bit-50 {
+    width: 50%; }
+  .bit-40 {
+    width: 40%; }
+  .bit-33 {
+    width: 33%; }
+  .bit-25 {
+    width: 25%; }
+  .bit-20 {
+    width: 100%; } }
+
+@media only screen and (min-width: 700px) {
+  .bit-100 {
+    width: 100%; }
+  .bit-75 {
+    width: 75%; }
+  .bit-60 {
+    width: 60%; }
+  .bit-50 {
+    width: 50%; }
+  .bit-40 {
+    width: 40%; }
+  .bit-33 {
+    width: 33%; }
+  .bit-25 {
+    width: 25%; }
+  .bit-20 {
+    width: 20%; } }
+
+/*================= patternlab specific styles ================*/
+.colorguideblock {
+  height: 100px;
+  margin-bottom: 5px p;
+    margin-bottom-margin-bottom: 0; }
+
+.headings h1, .headings h2, .headings h3, .headings h4, .headings h5 {
+  margin-bottom: 10px; }
+
+.break {
+  height: 1px;
+  width: 100%;
+  background: #616167;
+  margin-bottom: 20px; }
+
+.pattern-title.pattern-title {
+  margin-bottom: 0;
+  font: 1.8em/1.6 'ProximaNovaLight', Helvetica, Arial; }
+
+/*=================  ================*/
+.main > section:nth-child(even) {
+  background: #EEEEEE; }
+
+.owl-carousel div {
+  padding: 3px; }
+
+.owl-carousel div img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0; }
+
+.pagewidth {
+  width: 100%;
+  max-width: 978px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 15px; }
+
+.padding-s {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.padding-m {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+.padding-l {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.titlebreak {
+  height: 4px;
+  width: 40px;
+  background: #3278BB;
+  display: block;
+  margin: 0 auto 20px auto; }
+
+h1 + .titlebreak, h2 + .titlebreak, h3 + .titlebreak {
+  margin-top: -10px; }
+
+.animate {
+  transition: all 0.2s ease-in-out; }
+
+.small-cta {
+  padding: 12px 30px;
+  color: white;
+  margin: 0 20px 30px 0;
+  float: left; }
+
+.small-cta:hover {
+  -webkit-transform: translate3d(0, -5px, 0);
+          transform: translate3d(0, -5px, 0);
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2); }
+
+/*========== margin bottom on block level elements =========*/
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dd,
+p, figure,
+pre, table, fieldset, hr, img {
+  margin-bottom: 30px; }
+
+hr {
+  background: #cccccc;
+  height: 1px;
+  border: none;
+  display: block;
+  margin: 0 auto; }
+
+/*================= HEADER ================*/
+header {
+  background: #eaeaea;
+  padding: 0; }
+
+header .pagewidth {
+  padding: 0; }
+
+@media only screen and (min-width: 600px) {
+  header .pagewidth {
+    padding: 0 15px; } }
+
+@media only screen and (min-width: 600px) {
+  header {
+    padding: 30px; } }
+
+/*================= Mobile menu styling ================*/
+.mobile-menu-panel {
+  margin-bottom: 0; }
+
+.mobile-menu-p {
+  margin-bottom: 0; }
+
+.mobile-menu-toggle {
+  display: block;
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  background: #eee; }
+
+nav ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
+
+nav ul li {
+  float: left; }
+
+nav ul li a {
+  background: #D3D3D3;
+  border-bottom: 1px solid #AAA; }
+
+nav ul li a:hover {
+  background: #C2C2C2; }
+
+nav ul li a {
+  padding: 15px 20px 15px 20px;
+  display: block; }
+
+nav ul li ul li a {
+  padding: 15px 20px 15px 40px; }
+
+nav ul li {
+  display: block;
+  float: none; }
+
+nav {
+  width: 100%;
+  display: none;
+  z-index: 1; }
+
+/*==expandable drop down styling== */
+nav > ul > li > ul {
+  display: none; }
+
+.has-dropdown > a {
+  width: 80%;
+  float: left; }
+
+.has-dropdown .mobile-dropdown-lvl2 {
+  background: #bbbbbb;
+  width: 20%;
+  height: 53px;
+  float: right; }
+
+@media only screen and (min-width: 600px) {
+  .mobile-menu-toggle, .mobile-menu-p {
+    display: none; }
+  nav > ul > li > ul {
+    display: block; }
+  .has-dropdown .mobile-dropdown-lvl2 {
+    display: none; }
+  .has-dropdown > a {
+    width: auto;
+    float: none; }
+  nav ul li a {
+    height: auto; }
+  nav {
+    position: relative;
+    width: auto;
+    float: right;
+    display: block !important; }
+    nav ul li {
+      display: block;
+      float: left; }
+  nav > ul > li {
+    position: relative; }
+  nav > ul > li > ul {
+    position: absolute;
+    left: -9999px; }
+  nav > ul > li:hover > ul {
+    left: 0; }
+  nav > ul > li > a {
+    border-bottom: none;
+    border-left: 1px solid #AAA; }
+  nav > ul > li:first-child > a {
+    border-left: none; }
+  nav > ul > li > ul > li:first-child > a {
+    border-top: 1px solid #AAA; }
+  nav > ul > li > ul {
+    width: 200px; }
+  nav > ul > li > ul > li {
+    display: block;
+    width: 100%; }
+  nav > ul > li > ul > li > a {
+    padding: 20px; }
+  nav {
+    display: block;
+    position: relative;
+    z-index: 1; } }
+
+/*================= HOME PAGE ================*/
+.hero {
+  height: 266px;
+  background: url(http://lorempixel.com/g/1920/1080/nightlife/4) no-repeat bottom center;
+  height: 350px;
+  background-size: cover;
+  margin-bottom: 30px; }
+
+.welcome-panel .circlelink {
+  margin-bottom: 20px; }
+  .welcome-panel .circlelink a {
+    height: 66px; }
+  .welcome-panel .circlelink .circle {
+    background: #E47923;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    float: left;
+    margin: 0 15px 0 0; }
+  .welcome-panel .circlelink p {
+    text-decoration: underline;
+    color: #E47923;
+    font-size: 1.6em; }
+
+/*================= FOOTER ================*/
+/*===- sticky footer === */
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; }
+
+.page-wrap:after {
+  content: "";
+  display: block; }
+
+footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+  height: 142px; }
+
+footer {
+  background: grey;
+  padding: 30px; }
+
+footer p, footer h1, footer h2, footer h3 {
+  color: #ffffff; }
+
+/*======== Transistion Animations =========*/
+.rotate {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg); }
+
+.rotate90 {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+@media only screen and (min-width: 1030px) {
+  .homeBox:hover {
+    margin-top: -10px; } }
+
+.transition, .homeBox {
+  transition: all .3s ease; }

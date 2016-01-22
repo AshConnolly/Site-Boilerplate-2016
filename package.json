@@ -1,0 +1,29 @@
+{
+  "name": "atomic-site-boilerplate",
+  "version": "1.0.0",
+  "description": "Site template utilizing atomic design with modular, object-oriented Sass (Harry Roberts style), using Gulp for compilation and browser refresh.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshConnolly/Atomic-Site-Boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AshConnolly/Atomic-Site-Boilerplate/issues"
+  },
+  "homepage": "https://github.com/AshConnolly/Atomic-Site-Boilerplate#readme",
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "imagemin-pngquant": "^4.2.0"
+  }
+}

@@ -1,0 +1,250 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ * * Gloablly availible settings. Config switches. Brand colors etc
+ *
+ * TOOLS
+ * Mixins...............Useful mixins.
+ * * Globally availible tools. Public mixins. Helper functions.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ * * Ground zero styles. Low specificty. Far-reaching. Resets, noramlize etc
+ *
+ * BASE
+ * Headings.............H1–H6 styles.
+ * * unclassed HTML elements - ul, p, a, buttons, input, textarea, select, blockquote,
+ *
+ * OBJECTS
+ * Wrappers.............Wrapping and constraining elements.
+ * * OOCSS. Design patterns. No cosmetics. Begin using classes exclusively. Agnostically named (eg ui_list)
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ * * Designed pieces of UI. Still only using classes. Explicitly named.
+ *
+ * Optional - Theme Layer 
+ * Optional - A/B Test layer
+ *
+ * TRUMPS
+ * Text.................Text helpers.
+ * * overides, utiliies and helpers, 
+ * * affect one piece of the DOM at a time
+ * * usually carry important
+ */
+
+//* {background:red !important;}
+
+/*------------------------------------*\ 
+    SETTINGS - Global variables and config
+\*------------------------------------*/
+$color1: #26C57F;
+$color2: #F39E9E;
+
+.colorguideblock {background:gainsboro;}
+
+:selection {
+	background: #F0B981;
+}
+
+/*------------------------------------*\ 
+    TOOLS - Mixins
+\*------------------------------------*/
+@import "partials/_mixins.scss";
+
+/*------------------------------------*\ 
+    GENERIC - Normalize, resets, imports
+\*------------------------------------*/
+//Import other stylesheets
+@import "partials/_normalize.scss";
+@import "partials/_resetsAndHelpers.scss";
+@import "partials/_animations.scss";
+@import "partials/_gridSystem.scss";
+
+
+
+
+/*------------------------------------*\ 
+    BASE - elements, p, ul, h1-6 etc
+\*------------------------------------*/
+@import "partials/_fonts.scss";
+
+.break {height:1px;width:100%;background:rgb(195,195,195); margin-bottom:2rem;}
+
+/*---------- margin/padding on block level elements ---------*/
+h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dd,p,figure,pre,table,fieldset,hr,
+img {margin-bottom: 3rem;}
+
+h1,h2,h3,h4,h5,h6,p {margin:2rem 0;}
+h1,h2,h3,h4,h5,h6 {margin-top:4rem;}
+
+/* no margin top on all headings if first element */
+* > {
+	h1,h2,h3,h4,h5,h6 {
+		&:first-child {margin-top: 0;}
+	}	
+} 
+
+hr {background: #cccccc;height: 1px;border: none; display: block; }
+
+
+/*-----------buttons-------------*/ 
+//todo
+.btn { 
+	@extend .animate;
+	color:white; background:$color1; padding:1rem 2rem; border: 1px solid $color1; display: inline-block;border-radius: 4px;
+	&:hover {color:$color1; background:white; border-color: $color1; 
+		transform: translate3d(0, -5px, 0);
+		box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2);
+	}
+	
+	&.btn--secondary { color:$color1; background:white; border: 1px solid $color1;
+		&:hover {color:white; background:$color1;}
+	}
+}
+
+
+/*-----------inputs-------------*/ 
+textarea, input {}
+
+label[type=text] {display:block;}
+
+
+
+/*------------------------------------*\ 
+    OBEJCTS - Wrappers and constraining elements
+\*------------------------------------*/
+.main > section:nth-child(even) {background: rgb(245,245,245)}
+
+.pagewidth {width: 100%; max-width: 978px; margin-right: auto; margin-left: auto; padding: 0 1.5rem;}
+
+.padding-s {padding-top: 2rem; padding-bottom: 2rem}
+.padding-m {padding-top: 3rem; padding-bottom: 3rem}
+.padding-l {padding-top: 5rem; padding-bottom: 5rem}
+
+
+/*------------------------------------*\ 
+    COMPONENTS
+\*------------------------------------*/
+.site_header {background: $color1; padding: 0; @extend .cf;
+	.pagewidth {padding: 0; @extend .cf;}
+}
+
+@media only screen and (min-width:600px) {
+	.site_header {padding: 3rem;
+		.pagewidth {padding: 0 1.5rem;}
+	}
+}
+
+.site_footer {background: $color1;}
+
+/*------------------------------------*\ 
+    TRUMPS - overides, utilities, helpers
+\*------------------------------------*/
+@import "partials/_fallback.scss";
+
+
+/*================= patternlab specific styles ================*/
+.colorguideblock { height: 10rem; background:rgb(140,100,180)}
+/*=================  ================*/
+
+
+
+
+/*----------------- Mobile menu -------------------*/ 
+.mobile-menu-panel {margin-bottom: 0}
+.mobile-menu-p {margin: 0}
+.mobile-menu-toggle {
+	display: block;
+	position: relative;
+	z-index: 2;
+	padding: 20px;
+	background: $color1; color:white;
+} 
+
+nav ul { list-style-type: none; margin-bottom: 0; margin-top: 0; padding:0; @extend .cf;}
+nav ul li {float: left;}
+nav ul li a {background: white; color: $color1; border-bottom: 1px solid white;}
+nav ul li a:hover {background:$color1;color:white;}
+
+
+nav ul li a {padding:15px 20px 15px 20px;display: block;}
+nav ul li ul li a {padding:15px 20px 15px 40px;}
+nav ul li {display: block;float: none;}
+
+nav {width:100%;display: none; z-index: 1;}
+
+
+/*==expandable drop down styling== */
+nav > ul > li > ul {display: none}
+
+.has-dropdown > a {width: 80%;float: left;}
+.has-dropdown .mobile-dropdown-lvl2 {background: $color1;
+	width: 20%;height: 5.5rem;float: right;}
+
+	@media only screen and (min-width:600px) {   
+		.mobile-menu-toggle,.mobile-menu-p {display: none; }
+
+		nav > ul > li > ul {display: block}
+		.has-dropdown .mobile-dropdown-lvl2 {display: none; }
+		.has-dropdown > a {width: auto;float: none;}
+		nav ul li a {height: auto;}
+
+
+		nav {position:relative;width:auto;float: right; display:block !important;
+			ul li {display:block;float: left;}
+		}
+
+		nav > ul > li {position:relative;}
+		nav > ul > li > ul {position:absolute;left:-9999px;}
+		nav > ul > li:hover > ul {left:0;}
+
+
+		nav > ul > li > a {border-bottom: none; border-left: 1px solid $color1}
+		nav > ul > li:first-child > a {border-left:none;}
+		nav > ul > li > ul> li:first-child > a {border-top: 1px solid #AAA;}
+
+		nav > ul > li > ul {width:200px;}
+		nav > ul > li > ul > li {display:block;width:100%;}
+		nav > ul > li > ul > li > a {padding:20px;}
+
+		nav {
+			display: block;
+			position: relative;       
+			z-index: 1;
+		}
+	}
+
+
+
+
+
+
+/*================= FOOTER ================*/
+/*===- sticky footer === */
+.page-wrap {min-height: 100%;
+	/* equal to footer height */
+	margin-bottom: -142px;}
+
+	.page-wrap:after {
+		content: "";
+		display: block;}
+
+		footer, .page-wrap:after {
+	/* .push must be the same height as footer */
+	height: 142px; 
+}
+footer {
+	background: grey;
+	padding: 3rem;
+}
+
+footer p {color: #ffffff}
+
+
+
