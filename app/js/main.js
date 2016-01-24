@@ -1,9 +1,5 @@
-// TODO
-//rename this file to site.js
-
 //Smart resize
 (function($,sr){
-
   // debouncing function from John Hann
   // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
   var debounce = function (func, threshold, execAsap) {
@@ -33,7 +29,7 @@
 
 // usage:
 $(window).smartresize(function(){
-  // code that takes it easy...
+
 });
 
 //window scroll throttling
@@ -70,34 +66,37 @@ $(document).ready(function(){
 
         ///*========== Last menu drop down function to stop it flowing off page. ========*
 
-        var menuitemwidth = document.getElementById("last-menu-item").offsetWidth;
-        var menuitemdropdownwidth = document.getElementById("last-menu-item-drop-down").offsetWidth;
-        var numberofmenuitems = $("#navMenu > *").length;
+        // var menuitemwidth = document.getElementById("last-menu-item").offsetWidth;
+        // var menuitemdropdownwidth = document.getElementById("last-menu-item-drop-down").offsetWidth;
+        // var numberofmenuitems = $("#navMenu > *").length;
 
-        var leftval = menuitemdropdownwidth - ((menuitemwidth - numberofmenuitems)+1);
+        // var leftval = menuitemdropdownwidth - ((menuitemwidth - numberofmenuitems)+1);
  
-        var current_width = $(window).width();
+        // var current_width = $(window).width();
 
-        if (current_width > 600) {
+        // if (current_width > 600) {
 
-          $("#last-menu-item").mouseenter(function(){
-                $("#last-menu-item-drop-down").css({'position':'absolute','left':'-'+leftval+'px'});
-            });
-            $("#last-menu-item").mouseleave(function(){
-                $("#last-menu-item-drop-down").css({'position':'absolute','left':'-9999px'});
-            });
-        }
+        //   $("#last-menu-item").mouseenter(function(){
+        //         $("#last-menu-item-drop-down").css({'position':'absolute','left':'-'+leftval+'px'});
+        //     });
+        //     $("#last-menu-item").mouseleave(function(){
+        //         $("#last-menu-item-drop-down").css({'position':'absolute','left':'-9999px'});
+        //     });
+        // }
 
 
 
 
 });
 
-// Android and Iphone fixes
+
+// IOS Safari font size change on orientation fix
 if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
 document.write("<style>body {-webkit-text-size-adjust: none;}</style>")
-} // IOS Safari font size change on orientation fix
+} 
+
+//Android font booster fix
 if (navigator.userAgent.match(/(Android)/)) {
 document.write("<style>p,a,h1,h2,h3,h4,h5,div {max-height: 100000px;}</style>")
-} //Android font booster fix
+} 
   

@@ -40,6 +40,19 @@
 
 //* {background:red !important;}
 
+h1 { color:red;}
+h2 {color:black;}
+h3 {color:green;}
+@media (min-width:500px) {
+h1 { color:red;}
+}
+@media (min-width:500px) {
+h2 {color:black;}
+}
+@media (min-width:1000px) {
+  h3 {color:green;}
+}
+
 /*------------------------------------*\ 
     SETTINGS - Global variables and config
 \*------------------------------------*/
@@ -119,7 +132,6 @@ label[type=text] {display:block;}
 /*------------------------------------*\ 
     OBEJCTS - Wrappers and constraining elements
 \*------------------------------------*/
-.main > section:nth-child(even) {background: rgb(245,245,245)}
 
 .pagewidth {width: 100%; max-width: 978px; margin-right: auto; margin-left: auto; padding: 0 1.5rem;}
 
@@ -207,7 +219,7 @@ nav > ul > li > ul {display: none}
 
 		nav > ul > li > a {border-bottom: none; border-left: 1px solid $color1}
 		nav > ul > li:first-child > a {border-left:none;}
-		nav > ul > li > ul> li:first-child > a {border-top: 1px solid #AAA;}
+
 
 		nav > ul > li > ul {width:200px;}
 		nav > ul > li > ul > li {display:block;width:100%;}

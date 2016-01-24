@@ -6,15 +6,11 @@ body {
   width: 100%;
 }
 
+*,*:before,*:after{-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;}    
+
 ol, ul {list-style: none;}
-
-blockquote, q {quotes: none;}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
 
 a{text-decoration: none;}
 del {text-decoration: line-through;}
@@ -22,28 +18,15 @@ table {border-collapse: collapse;border-spacing: 0;}
 img {-ms-interpolation-mode: bicubic;/* image scaling IE fix */ 
   max-width: 100%; height: auto; display:block;}
 
-/*==========*/
-
-*,*:before,*:after{-moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;}    
-
 /*======== utility classes =========*/
-.clear {
-  clear: both; }
+/* Clearfix http:/nicolasgallagher.com/micro-clearfix-hack/ */
+.cf:before, .cf:after {
+  content: " ";
+  display: table; }
 
-.hide {
-  display: none; }
+.cf:after {clear: both; }
 
-.clickable {
-  cursor: pointer; }
-
-.center {text-align: center;}
-
-.left {float: left !important; }
-.right {float: right !important; }
-.end {margin-right: 0 !important;}
-.bottom {margin-bottom: 0 !important}
+.clear {clear: both; }
 
 .abcenter {
   overflow: auto;
@@ -63,16 +46,8 @@ img {-ms-interpolation-mode: bicubic;/* image scaling IE fix */
 > a,>p,>img {display: inline-block;vertical-align: middle;}
 }
 
-.table {
-   display:table; 
- }
 
-.tablecell {
-display:table-cell;
-vertical-align: middle;
-}
-
-//to remove color block on touch areas on touch devices
+//remove color block on touch areas on touch devices
 * { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 //to remove rounded corners on IOS
@@ -82,10 +57,3 @@ input[type=texarea],input[type=text] {
     border-radius:0;
 }
 
-/* Clearfix http:/nicolasgallagher.com/micro-clearfix-hack/ */
-.cf:before, .cf:after {
-  content: " ";
-  display: table; }
-
-.cf:after {
-  clear: both; }

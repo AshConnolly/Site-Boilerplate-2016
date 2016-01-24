@@ -38,6 +38,27 @@
  * * affect one piece of the DOM at a time
  * * usually carry important
  */
+h1 {
+  color: red; }
+
+h2 {
+  color: black; }
+
+h3 {
+  color: green; }
+
+@media (min-width: 500px) {
+  h1 {
+    color: red; } }
+
+@media (min-width: 500px) {
+  h2 {
+    color: black; } }
+
+@media (min-width: 1000px) {
+  h3 {
+    color: green; } }
+
 /*------------------------------------*\ 
     SETTINGS - Global variables and config
 \*------------------------------------*/
@@ -203,16 +224,11 @@ body {
   padding: 0;
   width: 100%; }
 
+*, *:before, *:after {
+  box-sizing: border-box; }
+
 ol, ul {
   list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
 
 a {
   text-decoration: none; }
@@ -231,34 +247,17 @@ img {
   height: auto;
   display: block; }
 
-/*==========*/
-*, *:before, *:after {
-  box-sizing: border-box; }
-
 /*======== utility classes =========*/
-.clear {
+/* Clearfix http:/nicolasgallagher.com/micro-clearfix-hack/ */
+.cf:before, .site_header:before, .site_header .pagewidth:before, nav ul:before, .cf:after, .site_header:after, .site_header .pagewidth:after, nav ul:after {
+  content: " ";
+  display: table; }
+
+.cf:after, .site_header:after, .site_header .pagewidth:after, nav ul:after {
   clear: both; }
 
-.hide {
-  display: none; }
-
-.clickable {
-  cursor: pointer; }
-
-.center {
-  text-align: center; }
-
-.left {
-  float: left !important; }
-
-.right {
-  float: right !important; }
-
-.end {
-  margin-right: 0 !important; }
-
-.bottom {
-  margin-bottom: 0 !important; }
+.clear {
+  clear: both; }
 
 .abcenter {
   overflow: auto;
@@ -285,27 +284,12 @@ img {
     display: inline-block;
     vertical-align: middle; }
 
-.table {
-  display: table; }
-
-.tablecell {
-  display: table-cell;
-  vertical-align: middle; }
-
 * {
   -webkit-tap-highlight-color: transparent; }
 
 input[type=texarea], input[type=text] {
   -webkit-appearance: none;
   border-radius: 0; }
-
-/* Clearfix http:/nicolasgallagher.com/micro-clearfix-hack/ */
-.cf:before, .site_header:before, .site_header .pagewidth:before, nav ul:before, .cf:after, .site_header:after, .site_header .pagewidth:after, nav ul:after {
-  content: " ";
-  display: table; }
-
-.cf:after, .site_header:after, .site_header .pagewidth:after, nav ul:after {
-  clear: both; }
 
 .animate, .btn {
   transition: all 0.3s ease-in-out; }
@@ -443,7 +427,8 @@ h5, .h5 {
   font-size: 1.8rem; }
 
 p a {
-  text-decoration: underline; }
+  text-decoration: underline;
+  color: #26C57F; }
 
 ol {
   list-style-position: inside;
@@ -531,9 +516,6 @@ label[type=text] {
 /*------------------------------------*\ 
     OBEJCTS - Wrappers and constraining elements
 \*------------------------------------*/
-.main > section:nth-child(even) {
-  background: whitesmoke; }
-
 .pagewidth {
   width: 100%;
   max-width: 978px;
@@ -675,8 +657,6 @@ nav > ul > li > ul {
     border-left: 1px solid #26C57F; }
   nav > ul > li:first-child > a {
     border-left: none; }
-  nav > ul > li > ul > li:first-child > a {
-    border-top: 1px solid #AAA; }
   nav > ul > li > ul {
     width: 200px; }
   nav > ul > li > ul > li {
