@@ -49,17 +49,17 @@ BEM approach encourages having a unique class for every element, keeping all ele
 Classe names are all lower case and use underscores for spacing:   
 ```<header class="site_header"></header>```
 
-**Modifier classes** use the elements class name with an added double hyphen, followed by the modifier name: 
+**Modifier classes** use the elements class name with an added double hyphen, followed by the modifier name:   
 ```<div class="modal   modal--small"></div>```
 
-3 spaces before modifiers for readability:
+3 spaces before modifiers for readability:   
 ```<div class="modal   modal--small"></div>```
 Modifiers come last within the class name list.
 
 ###Javascipt hooks 
 >A common practice is to use data-* attributes as JS hooks, but this is incorrect. data-* attributes, as per the spec, are used to store custom data private to the page or application (emphasis mine). data-* attributes are designed to store data, not be bound to.
 
-All javascript hooks should be prefixed with 'js_'. for example: 
+All javascript hooks should be prefixed with 'js_'. for example:   
 ```<a class="btn js_open_modal"></a>```
 
 ###Avoid use of IDs 
@@ -128,18 +128,18 @@ Here we can see that the .nav class is meant to be used on a ul element, and not
  ```
 
 ###CSS titles
-All section titles are listed as: 
+All section titles are listed as:   
 ```
 /*------------------------------------*\ 
 Section Title
 \*------------------------------------*/
 ```
 
-Section subtitles listed as: 
+Section subtitles listed as:   
 ```/*-----------buttons-------------*/ ```
 
 ###HTML Markup
-3 spaces before modifiers for readability: 
+3 spaces before modifiers for readability:   
 ```<div class="modal   modal--small"></div>```
 Modifiers come last within the class name list.
 
