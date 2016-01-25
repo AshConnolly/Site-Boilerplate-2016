@@ -53,7 +53,7 @@ Classe names are all lower case and use underscores for spacing:
 ```<div class="modal   modal--small"></div>```
 
 3 spaces before modifiers for readability:   
-```<div class="modal   modal--small"></div>```
+```<div class="modal   modal--small"></div>```   
 Modifiers come last within the class name list.
 
 ###Javascipt hooks 
@@ -140,7 +140,7 @@ Section subtitles listed as:
 
 ###HTML Markup
 3 spaces before modifiers for readability:   
-```<div class="modal   modal--small"></div>```
+```<div class="modal   modal--small"></div>```   
 Modifiers come last within the class name list.
 
 ####Meaningful use of white space
