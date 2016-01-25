@@ -46,7 +46,7 @@ Specificity can cause issues when working with the cascade, but if component nes
 BEM approach encourages having a unique class for every element, keeping all elements at the root of the cascade, eliminating any cascade entirely. However the cascade can be useful, speed up development and cause no issues if components are built responsibly with specificity in mind.
 
 ###Class names
-Classe names are all lower case and use underscores for spacing: 
+Classe names are all lower case and use underscores for spacing:   
 ```<header class="site_header"></header>```
 
 **Modifier classes** use the elements class name with an added double hyphen, followed by the modifier name: 
