@@ -48,7 +48,7 @@
     TOOLS - Mixins
 \*------------------------------------*/
 /*------------------------------------*\ 
-    GENERIC - Normalize, resets, imports
+    GENERIC - Normalize, resets
 \*------------------------------------*/
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -223,7 +223,13 @@ img {
   height: auto;
   display: block; }
 
-/*======== utility classes =========*/
+* {
+  -webkit-tap-highlight-color: transparent; }
+
+input[type=texarea], input[type=text] {
+  -webkit-appearance: none;
+  border-radius: 0; }
+
 /* Clearfix http:/nicolasgallagher.com/micro-clearfix-hack/ */
 .cf:before, .site_header:before, nav ul:before, .cf:after, .site_header:after, nav ul:after {
   content: " ";
@@ -234,100 +240,6 @@ img {
 
 .clear {
   clear: both; }
-
-.abcenter {
-  overflow: auto;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; }
-
-.vert_center {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
-
-.eq_dist {
-  text-align: justify; }
-  .eq_dist:after {
-    content: '';
-    width: 100%;
-    display: inline-block; }
-  .eq_dist > a, .eq_dist > p, .eq_dist > img {
-    display: inline-block;
-    vertical-align: middle; }
-
-* {
-  -webkit-tap-highlight-color: transparent; }
-
-input[type=texarea], input[type=text] {
-  -webkit-appearance: none;
-  border-radius: 0; }
-
-html {
-  font-size: 62.5%; }
-
-body {
-  font: 16px/1.5 sans-serif;
-  font-size: 1.6rem;
-  color: #787878; }
-
-h1, h2, h3, h4, h5, p, li, blockquote, a, ul, ol {
-  margin: 0; }
-
-h1, h2, h3, h4, h5 {
-  color: grey; }
-
-h1, .h1 {
-  font-size: 2.8rem; }
-
-h2, .h2 {
-  font-size: 2.6rem; }
-
-h3, .h3 {
-  font-size: 2.2rem; }
-
-h4, .h4 {
-  font-size: 2rem; }
-
-h5, .h5 {
-  font-size: 1.8rem; }
-
-p a {
-  text-decoration: underline;
-  color: #26C57F; }
-
-ol {
-  list-style-position: inside;
-  list-style: disc; }
-
-ol li {
-  line-height: 2rem; }
-  ol li ol {
-    margin-left: 1rem;
-    margin-bottom: 0; }
-
-/*ul*/
-.datalist {
-  list-style-position: inside;
-  list-style-type: disc;
-  margin-top: 0; }
-  .datalist li {
-    line-height: 2.5rem; }
-    .datalist li ul {
-      margin-left: 1rem;
-      margin-bottom: 0; }
-
-/*ol*/
-.numberedlist {
-  list-style: decimal; }
-  .numberedlist li {
-    line-height: 2.5rem; }
-  .numberedlist ol {
-    list-style: decimal; }
 
 /* Attribute selector */
 [class*='bit-'] {
@@ -435,6 +347,68 @@ ol li {
 /*------------------------------------*\ 
     BASE - elements, p, ul, h1-6 etc
 \*------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  font: 16px/1.5 sans-serif;
+  font-size: 1.6rem;
+  color: #787878; }
+
+h1, h2, h3, h4, h5, p, li, blockquote, a, ul, ol {
+  margin: 0; }
+
+h1, h2, h3, h4, h5 {
+  color: grey; }
+
+h1, .h1 {
+  font-size: 2.8rem; }
+
+h2, .h2 {
+  font-size: 2.6rem; }
+
+h3, .h3 {
+  font-size: 2.2rem; }
+
+h4, .h4 {
+  font-size: 2rem; }
+
+h5, .h5 {
+  font-size: 1.8rem; }
+
+p a {
+  text-decoration: underline;
+  color: #26C57F; }
+
+ol {
+  list-style-position: inside;
+  list-style: disc; }
+
+ol li {
+  line-height: 2rem; }
+  ol li ol {
+    margin-left: 1rem;
+    margin-bottom: 0; }
+
+/*ul*/
+.datalist {
+  list-style-position: inside;
+  list-style-type: disc;
+  margin-top: 0; }
+  .datalist li {
+    line-height: 2.5rem; }
+    .datalist li ul {
+      margin-left: 1rem;
+      margin-bottom: 0; }
+
+/*ol*/
+.numberedlist {
+  list-style: decimal; }
+  .numberedlist li {
+    line-height: 2.5rem; }
+  .numberedlist ol {
+    list-style: decimal; }
+
 hr, .break {
   height: 1px;
   width: 100%;
@@ -497,13 +471,18 @@ label[type=text] {
 /*------------------------------------*\ 
     COMPONENTS
 \*------------------------------------*/
+/*-------- patternlab specific style ----------*/
+.colorguideblock {
+  height: 10rem;
+  background: #8c64b4; }
+
+/*-----------header-------------*/
 .site_header {
   background: #26C57F;
   padding: 3rem; }
-
-@media only screen and (max-width: 600px) {
-  .site_header {
-    padding: 0; } }
+  @media (max-width: 600px) {
+    .site_header {
+      padding: 0; } }
 
 /*-----------Footer-------------*/
 .site_footer {
@@ -529,16 +508,7 @@ footer {
 footer p {
   color: #ffffff; }
 
-/*------------------------------------*\ 
-    TRUMPS - overides, utilities, helpers
-\*------------------------------------*/
-/*================= patternlab specific styles ================*/
-.colorguideblock {
-  height: 10rem;
-  background: #8c64b4; }
-
-/*=================  ================*/
-/*----------------- Mobile menu -------------------*/
+/*----------------- Mobile menu - needs rebuilding - old code -------------------*/
 .mobile-menu-panel {
   margin-bottom: 0; }
 
@@ -644,3 +614,32 @@ nav > ul > li > ul {
     display: block;
     position: relative;
     z-index: 1; } }
+
+/*------------------------------------*\ 
+    TRUMPS - overides, utilities, helpers
+\*------------------------------------*/
+/*======== utility classes =========*/
+.abcenter {
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.vert_center {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+.eq_dist {
+  text-align: justify; }
+  .eq_dist:after {
+    content: '';
+    width: 100%;
+    display: inline-block; }
+  .eq_dist > a, .eq_dist > p, .eq_dist > img {
+    display: inline-block;
+    vertical-align: middle; }
