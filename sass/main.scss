@@ -38,28 +38,12 @@
  * * usually carry important
  */
 
-//* {background:red !important;}
-
-h1 { color:red;}
-h2 {color:black;}
-h3 {color:green;}
-@media (min-width:500px) {
-h1 { color:red;}
-}
-@media (min-width:500px) {
-h2 {color:black;}
-}
-@media (min-width:1000px) {
-  h3 {color:green;}
-}
 
 /*------------------------------------*\ 
     SETTINGS - Global variables and config
 \*------------------------------------*/
 $color1: #26C57F;
 $color2: #F39E9E;
-
-.colorguideblock {background:gainsboro;}
 
 :selection {
 	background: #F0B981;
@@ -76,18 +60,18 @@ $color2: #F39E9E;
 //Import other stylesheets
 @import "partials/_normalize.scss";
 @import "partials/_resetsAndHelpers.scss";
-@import "partials/_animations.scss";
+
+@import "partials/_fonts.scss";
 @import "partials/_gridSystem.scss";
 
-
-
+@import "partials/_animation.scss";
+@import "partials/_fallback.scss";
 
 /*------------------------------------*\ 
     BASE - elements, p, ul, h1-6 etc
 \*------------------------------------*/
-@import "partials/_fonts.scss";
 
-.break {height:1px;width:100%;background:rgb(195,195,195); margin-bottom:2rem;}
+hr,.break {height:1px;width:100%;background:rgb(195,195,195); margin-bottom:2rem;}
 
 /*---------- margin/padding on block level elements ---------*/
 h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dd,p,figure,pre,table,fieldset,hr,
@@ -96,18 +80,10 @@ img {margin-bottom: 3rem;}
 h1,h2,h3,h4,h5,h6,p {margin:2rem 0;}
 h1,h2,h3,h4,h5,h6 {margin-top:4rem;}
 
-/* no margin top on all headings if first element */
-* > {
-	h1,h2,h3,h4,h5,h6 {
-		&:first-child {margin-top: 0;}
-	}	
-} 
-
 hr {background: #cccccc;height: 1px;border: none; display: block; }
 
 
 /*-----------buttons-------------*/ 
-//todo
 .btn { 
 	@extend .animate;
 	color:white; background:$color1; padding:1rem 2rem; border: 1px solid $color1; display: inline-block;border-radius: 4px;
@@ -124,51 +100,52 @@ hr {background: #cccccc;height: 1px;border: none; display: block; }
 
 /*-----------inputs-------------*/ 
 textarea, input {}
-
 label[type=text] {display:block;}
-
 
 
 /*------------------------------------*\ 
     OBEJCTS - Wrappers and constraining elements
 \*------------------------------------*/
-
-.pagewidth {width: 100%; max-width: 978px; margin-right: auto; margin-left: auto; padding: 0 1.5rem;}
-
-.padding-s {padding-top: 2rem; padding-bottom: 2rem}
-.padding-m {padding-top: 3rem; padding-bottom: 3rem}
-.padding-l {padding-top: 5rem; padding-bottom: 5rem}
+.content_width {width: 90%; max-width: 978px; margin-right: auto; margin-left: auto;}
 
 
 /*------------------------------------*\ 
     COMPONENTS
 \*------------------------------------*/
-.site_header {background: $color1; padding: 0; @extend .cf;
-	.pagewidth {padding: 0; @extend .cf;}
+.site_header {background: $color1;padding: 3rem; @extend .cf;
+	@media (max-width:600px) {padding: 0;}}
 }
 
-@media only screen and (min-width:600px) {
-	.site_header {padding: 3rem;
-		.pagewidth {padding: 0 1.5rem;}
-	}
-}
 
+/*-----------Footer-------------*/ 
 .site_footer {background: $color1;}
+.page-wrap {min-height: 100%;
+	/* equal to footer height */
+	margin-bottom: -142px;}
+
+	.page-wrap:after {
+		content: "";
+		display: block;}
+
+		footer, .page-wrap:after {
+	/* .push must be the same height as footer */
+	height: 142px; 
+}
+footer {
+	background: grey;
+	padding: 3rem;
+}
+footer p {color: #ffffff}
 
 /*------------------------------------*\ 
     TRUMPS - overides, utilities, helpers
 \*------------------------------------*/
-@import "partials/_fallback.scss";
 
-
-/*================= patternlab specific styles ================*/
+/*-------- patternlab specific style ----------*/
 .colorguideblock { height: 10rem; background:rgb(140,100,180)}
-/*=================  ================*/
 
 
-
-
-/*----------------- Mobile menu -------------------*/ 
+/*----------------- Mobile menu - needs rebuilding - old code -------------------*/ 
 .mobile-menu-panel {margin-bottom: 0}
 .mobile-menu-p {margin: 0}
 .mobile-menu-toggle {
@@ -231,32 +208,4 @@ nav > ul > li > ul {display: none}
 			z-index: 1;
 		}
 	}
-
-
-
-
-
-
-/*================= FOOTER ================*/
-/*===- sticky footer === */
-.page-wrap {min-height: 100%;
-	/* equal to footer height */
-	margin-bottom: -142px;}
-
-	.page-wrap:after {
-		content: "";
-		display: block;}
-
-		footer, .page-wrap:after {
-	/* .push must be the same height as footer */
-	height: 142px; 
-}
-footer {
-	background: grey;
-	padding: 3rem;
-}
-
-footer p {color: #ffffff}
-
-
 

@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 
-var siteroot = "app/";
+var siteroot = "./";
 
 gulp.task('sass', function() {
     return gulp.src(siteroot + 'sass/**/*.scss')
