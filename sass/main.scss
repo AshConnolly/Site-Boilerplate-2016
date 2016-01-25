@@ -38,18 +38,15 @@
  * * usually carry important
  */
 
-
 /*------------------------------------*\ 
     SETTINGS - Global variables and config
 \*------------------------------------*/
 @import "partials/_settings.scss";
 
-
 /*------------------------------------*\ 
     TOOLS - Mixins
 \*------------------------------------*/
 @import "partials/_mixins.scss";
-
 
 /*------------------------------------*\ 
     GENERIC - Normalize, resets
@@ -59,29 +56,24 @@
 @import "partials/_gridSystem.scss";
 @import "partials/_animation.scss";
 
-
 /*------------------------------------*\ 
     BASE - elements, p, ul, h1-6 etc
 \*------------------------------------*/
 @import "partials/_fonts.scss";
 @import "partials/_base.scss";
 
-
 /*------------------------------------*\ 
     OBEJCTS - Wrappers and constraining elements
 \*------------------------------------*/
 @import "partials/_objects.scss";
-
 
 /*------------------------------------*\ 
     COMPONENTS
 \*------------------------------------*/
 @import "partials/_components.scss";
 
-
 /*------------------------------------*\ 
     TRUMPS - overides, utilities, helpers
 \*------------------------------------*/
 @import "partials/_fallback.scss";
 @import "partials/_utilities.scss";
-

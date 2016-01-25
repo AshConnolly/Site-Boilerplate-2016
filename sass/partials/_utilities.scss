@@ -1,20 +1,7 @@
 /*======== utility classes =========*/
-
-
-.abcenter {
-  overflow: auto;
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-}
-
-.vert_center {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.eq_dist {text-align: justify;
-&:after{ content: '';  width: 100%;  display: inline-block;}
-> a,>p,>img {display: inline-block;vertical-align: middle;}
+.abcenter { overflow: auto; margin: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
+.vert_center { position: absolute; top: 50%; transform: translateY(-50%); }
+.eq_dist { text-align: justify;
+		&:after { content: ''; width: 100%; display: inline-block; }
+		> a, >p, >img { display: inline-block; vertical-align: middle; }
 }

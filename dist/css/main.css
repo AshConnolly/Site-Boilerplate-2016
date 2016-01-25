@@ -416,8 +416,7 @@ hr, .break {
   margin-bottom: 2rem; }
 
 /*---------- margin/padding on block level elements ---------*/
-h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dd, p, figure, pre, table, fieldset, hr,
-img {
+h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dd, p, figure, pre, table, fieldset, hr, img {
   margin-bottom: 3rem; }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -497,8 +496,8 @@ label[type=text] {
   content: "";
   display: block; }
 
-footer, .page-wrap:after {
-  /* .push must be the same height as footer */
+footer,
+.page-wrap:after {
   height: 142px; }
 
 footer {
@@ -572,7 +571,8 @@ nav > ul > li > ul {
   float: right; }
 
 @media only screen and (min-width: 600px) {
-  .mobile-menu-toggle, .mobile-menu-p {
+  .mobile-menu-toggle,
+  .mobile-menu-p {
     display: none; }
   nav > ul > li > ul {
     display: block; }
