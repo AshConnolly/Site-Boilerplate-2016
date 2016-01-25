@@ -1,0 +1,96 @@
+/*-------- patternlab specific style ----------*/
+.colorguideblock { height: 10rem; background:rgb(140,100,180)}
+
+/*-----------header-------------*/ 
+.site_header {background: $color1;padding: 3rem; @extend .cf;
+	@media (max-width:600px) {padding: 0;}}
+}
+
+
+/*-----------Footer-------------*/ 
+.site_footer {background: $color1;}
+.page-wrap {min-height: 100%;
+	/* equal to footer height */
+	margin-bottom: -142px;}
+
+	.page-wrap:after {
+		content: "";
+		display: block;}
+
+		footer, .page-wrap:after {
+	/* .push must be the same height as footer */
+	height: 142px; 
+}
+footer {
+	background: grey;
+	padding: 3rem;
+}
+footer p {color: #ffffff}
+
+
+
+
+
+/*----------------- Mobile menu - needs rebuilding - old code -------------------*/ 
+.mobile-menu-panel {margin-bottom: 0}
+.mobile-menu-p {margin: 0}
+.mobile-menu-toggle {
+	display: block;
+	position: relative;
+	z-index: 2;
+	padding: 20px;
+	background: $color1; color:white;
+} 
+
+nav ul { list-style-type: none; margin-bottom: 0; margin-top: 0; padding:0; @extend .cf;}
+nav ul li {float: left;}
+nav ul li a {background: white; color: $color1; border-bottom: 1px solid white;}
+nav ul li a:hover {background:$color1;color:white;}
+
+
+nav ul li a {padding:15px 20px 15px 20px;display: block;}
+nav ul li ul li a {padding:15px 20px 15px 40px;}
+nav ul li {display: block;float: none;}
+
+nav {width:100%;display: none; z-index: 1;}
+
+
+/*==expandable drop down styling== */
+nav > ul > li > ul {display: none}
+
+.has-dropdown > a {width: 80%;float: left;}
+.has-dropdown .mobile-dropdown-lvl2 {background: $color1;
+	width: 20%;height: 5.5rem;float: right;}
+
+	@media only screen and (min-width:600px) {   
+		.mobile-menu-toggle,.mobile-menu-p {display: none; }
+
+		nav > ul > li > ul {display: block}
+		.has-dropdown .mobile-dropdown-lvl2 {display: none; }
+		.has-dropdown > a {width: auto;float: none;}
+		nav ul li a {height: auto;}
+
+
+		nav {position:relative;width:auto;float: right; display:block !important;
+			ul li {display:block;float: left;}
+		}
+
+		nav > ul > li {position:relative;}
+		nav > ul > li > ul {position:absolute;left:-9999px;}
+		nav > ul > li:hover > ul {left:0;}
+
+
+		nav > ul > li > a {border-bottom: none; border-left: 1px solid $color1}
+		nav > ul > li:first-child > a {border-left:none;}
+
+
+		nav > ul > li > ul {width:200px;}
+		nav > ul > li > ul > li {display:block;width:100%;}
+		nav > ul > li > ul > li > a {padding:20px;}
+
+		nav {
+			display: block;
+			position: relative;       
+			z-index: 1;
+		}
+	}
