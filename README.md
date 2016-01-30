@@ -3,16 +3,27 @@ Site Boilerplate (for IE 9 and upwards) utilizing the following principles:
 * [Atomic Design](http://patternlab.io/)
 * Object-oriented SCSS for modular development 
 * [CSS guidelines](http://cssguidelin.es/) / [ITCSS](https://twitter.com/itcss_io) scss structure 
-* Loosely follows [BEM](https://css-tricks.com/bem-101/) to create clear css components but with less parent element name repetition and allowing low-level nesting. 
-* Web app source and dist folder structure
-* Using Gulp for compilation and browser refresh.
+* Loosely follows [BEM](https://css-tricks.com/bem-101/) to create clear CSS components but with less parent element name repetition and allowing low-level nesting. 
 
-Brad Frost's Atomic Design and Harry Robert's CSSGuidlines/ITCSS share the same approach in that they begin will simple elements/atoms and building up to complex groups of elements/molecules. This works in favor of the cascade as it reduces any CSS specificity issues.
+### Boilerplate features:
+* Sass compilation
+* CSS autoprefixer
+* JS concatination
+* Sass error catching to prevent watch task falling over
+* Browsersync for faster development, easier multi browser / device testing
+* Image compression
+* NPM / Gulp friendly gitignore
+* Pre-set font size management
+* Basic responsive grid
+* Living style guide
 
+Brad Frost's Atomic Design and Harry Robert's CSSGuidlines / ITCSS share the same approach in that they begin will simple elements / atoms and building up to complex groups of elements / molecules. This works in favor of the cascade as it reduces CSS specificity issues.
 
 ###Further Reading
-* [Brad Frost - Atomic Design](https://vimeo.com/67476280)
+Harry Roberts and Brad Frost have strongly influenced the guidelines set out below and I highly recommend giving them a read.
 * [Harry Roberts - MindBEMding – getting your head ’round BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
+* [CSS guidelines Harry Roberts](http://cssguidelin.es/) 
+* [Brad Frost - Atomic Design](https://vimeo.com/67476280)
 
 #Front End Guidelines
 
@@ -25,19 +36,20 @@ The CSS should aim to be object orientated to create reusable, flexible classes 
 * Maintainable
 
 ###Components
-Component based CSS keeps the code clean and modular. A BEM approach would be like this, note repeated parent class name:
+Component based CSS keeps the code clean and modular. A BEM approach would be like this, note repeated parent class name and lack of nesting:
 ```
 .car {}
 	.car__wheel {}
 	.car__door {}
 ```
-When looking at both the HTML markup and the CSS it's clear where the parent is and what it is called. So it is acceptable to not reference the parent name in the child element class names:
+When looking at both the HTML markup and the CSS it's often clear where and what the parent is. So it is acceptable to not reference the parent name in the child element class names. Instead we can use nesting for child elements when working with clear CSS component:
 ```
 .car {
 	.wheel {}
 	.door {}
 }
 ```
+
 ##Nesting and specificity
 Specificity can cause issues when working with the cascade, but if component nesting is kept low (ideally no more than 3) and clear, it will cause minimal problems. 
 
@@ -54,7 +66,7 @@ Classe names are all lower case and use underscores for spacing:
 ```<div class="modal   modal--small"></div>```   
 Modifiers come last within the class name list.
 
-### Context vs component / element
+### Context vs component / element styles
 Implementation styles are based on context, visual styles are based on component / element.
 Style elements based on what they are - not where they are.
 Style code should be based on the component.
@@ -65,14 +77,13 @@ For example, if a button is in a component in which the button needs to be float
 A button modifier class in this situation would be another option, although it may create unneeded additional markup, as well as making future style modifications within layout changes more difficult.
 
 ###Content agnostic class names
-Component class names should not be tied to the content inside the component. For example using the the class name ‘welcome_message’ would not be ideal. As that layout / component could be used elsewhere for other purposes.
+Component class names should not be tied to the content inside the component. For example using the the class name `welcome_message` would not be ideal. As that layout / component could be used elsewhere for other purposes a more appropriate class name would be `message`.
 
 ###Avoid use of IDs 
-IDs have the highest specificity of any css selector and as a result they cause issue with overwriting styles in the cascade. Avoid using any IDs.
+IDs have the highest specificity of any CSS selector and as a result they cause issue with overwriting styles in the cascade. Avoid using any IDs.
 Sometimes developers will add an ID to an element for the sole purpose of referencing the ID in javascript. However this isnt neccessary, instead use a class and reference the element using getElementsByClassName("class_name")[0]; (note 'ClassName' is beneficial over 'ClassList' due to it's wider browser support).
 
 ###Quasi-Qualified Selectors
-
 >`ul.nav {}`
 Here we can see that the .nav class is meant to be used on a ul element, and not on a nav. By using quasi-qualified selectors we can still provide that information without actually qualifying the selector    
 `/*ul*/.nav {}`
@@ -84,7 +95,6 @@ All javascript hooks should be prefixed with 'js_'. for example:
 ```<a class="btn js_open_modal"></a>```
 
 ###CSS structure
-
 ```
 /**
  * CONTENTS
