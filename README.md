@@ -17,6 +17,10 @@ Site Boilerplate (for IE 9 and upwards) utilizing the following principles:
 * Basic responsive grid
 * Living style guide
 
+### Updates coming soon
+* Accessibility information and markup
+* Media query usage instructions
+
 Brad Frost's Atomic Design and Harry Robert's CSSGuidlines / ITCSS share the same approach in that they begin will simple elements / atoms and building up to complex groups of elements / molecules. This works in favor of the cascade as it reduces CSS specificity issues.
 
 ###Further Reading
@@ -154,7 +158,7 @@ Section subtitles listed as:
 ###HTML Markup
 
 ### Sematics
-Use appropriate semantic elements where possible. For example use `<aside>` for a sidebar. More here - [Mozilla Developer Network - HTML element reference](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+Use appropriate semantic elements where possible. Further reading here - [Mozilla Developer Network - HTML element reference](https://developer.mozilla.org/en/docs/Web/HTML/Element)
 
 3 spaces before modifiers for readability:   
 ```<div class="modal   modal--small"></div>```   
@@ -176,3 +180,5 @@ Modifiers come last within the class name list.
     ...
 </main>
 ```
+
+
