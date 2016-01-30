@@ -149,6 +149,10 @@ Section subtitles listed as:
 ```/*-----------buttons-------------*/ ```
 
 ###HTML Markup
+
+### Sematics
+Use appropriate semantic elements where possible. For example use `<aside>` for a sidebar. More here - [Mozilla Developer Network - HTML element reference](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+
 3 spaces before modifiers for readability:   
 ```<div class="modal   modal--small"></div>```   
 Modifiers come last within the class name list.
