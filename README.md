@@ -89,10 +89,13 @@ Here we can see that the .nav class is meant to be used on a ul element, and not
 `/*ul*/.nav {}`
 
 ###Javascipt hooks 
->A common practice is to use data-* attributes as JS hooks, but this is incorrect. data-* attributes, as per the spec, are used to store custom data private to the page or application (emphasis mine). data-* attributes are designed to store data, not be bound to.
 
 All javascript hooks should be prefixed with 'js_'. for example:   
 ```<a class="btn js_open_modal"></a>```
+
+Toggle classes for state changes. Do not toggle data attributes for state changes:
+>A common practice is to use data-* attributes as JS hooks, but this is incorrect. data-* attributes, as per the spec, are used to store custom data private to the page or application (emphasis mine). data-* attributes are designed to store data, not be bound to.
+
 
 ###CSS structure
 ```
