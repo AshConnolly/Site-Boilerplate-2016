@@ -24,7 +24,6 @@ The CSS should aim to be object orientated to create reusable, flexible classes 
 * Object Orientated
 * Maintainable
 
-
 ###Components
 Component based CSS keeps the code clean and modular. A BEM approach would be like this, note repeated parent class name:
 ```
@@ -39,7 +38,6 @@ When looking at both the HTML markup and the CSS it's clear where the parent is 
 	.door {}
 }
 ```
-
 ##Nesting and specificity
 Specificity can cause issues when working with the cascade, but if component nesting is kept low (ideally no more than 3) and clear, it will cause minimal problems. 
 
@@ -49,22 +47,12 @@ BEM approach encourages having a unique class for every element, keeping all ele
 Classe names are all lower case and use underscores for spacing:   
 ```<header class="site_header"></header>```
 
-**Modifier classes** use the elements class name with an added double hyphen, followed by the modifier name:   
+**Modifier classes** use the element's class name with an added double hyphen, followed by the modifier name:   
 ```<div class="modal   modal--small"></div>```
 
 3 spaces before modifiers for readability:   
 ```<div class="modal   modal--small"></div>```   
 Modifiers come last within the class name list.
-
-###Javascipt hooks 
->A common practice is to use data-* attributes as JS hooks, but this is incorrect. data-* attributes, as per the spec, are used to store custom data private to the page or application (emphasis mine). data-* attributes are designed to store data, not be bound to.
-
-All javascript hooks should be prefixed with 'js_'. for example:   
-```<a class="btn js_open_modal"></a>```
-
-###Avoid use of IDs 
-IDs have the highest specificity of any css selector and as a result they cause issue with overwriting styles in the cascade. Avoid using any IDs.
-Sometimes developers will add an ID to an element for the sole purpose of referencing the ID in javascript. However this isnt neccessary, instead use a class and reference the element using getElementsByClassName("class_name")[0]; (note 'ClassName' is beneficial over 'ClassList' due to it's wider browser support).
 
 ### Context vs component / element
 Implementation styles are based on context, visual styles are based on component / element.
@@ -74,7 +62,14 @@ Implementation code should be based on thier context.
 
 For example, if a button is in a component in which the button needs to be floated right, it is due to being inside the parent component. The button styling doesnt need modifying. Simply reference the button inside of the compnent class and add the implementation classes. 
 
-A button modifier class in this situation would be less preferrable as it would create unneeded additional markup, as well as making future style modifications more difficult.
+A button modifier class in this situation would be another option, although it may create unneeded additional markup, as well as making future style modifications within layout changes more difficult.
+
+###Content agnostic class names
+Component class names should not be tied to the content inside the component. For example using the the class name ‘welcome_message’ would not be ideal. As that layout / component could be used elsewhere for other purposes.
+
+###Avoid use of IDs 
+IDs have the highest specificity of any css selector and as a result they cause issue with overwriting styles in the cascade. Avoid using any IDs.
+Sometimes developers will add an ID to an element for the sole purpose of referencing the ID in javascript. However this isnt neccessary, instead use a class and reference the element using getElementsByClassName("class_name")[0]; (note 'ClassName' is beneficial over 'ClassList' due to it's wider browser support).
 
 ###Quasi-Qualified Selectors
 
@@ -82,6 +77,11 @@ A button modifier class in this situation would be less preferrable as it would 
 Here we can see that the .nav class is meant to be used on a ul element, and not on a nav. By using quasi-qualified selectors we can still provide that information without actually qualifying the selector    
 `/*ul*/.nav {}`
 
+###Javascipt hooks 
+>A common practice is to use data-* attributes as JS hooks, but this is incorrect. data-* attributes, as per the spec, are used to store custom data private to the page or application (emphasis mine). data-* attributes are designed to store data, not be bound to.
+
+All javascript hooks should be prefixed with 'js_'. for example:   
+```<a class="btn js_open_modal"></a>```
 
 ###CSS structure
 
