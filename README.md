@@ -17,7 +17,7 @@ Site Boilerplate (for IE 9 and upwards) utilizing the following principles:
 * Living style guide / patternlab
 
 ### Updates coming soon
-* Accessibility information and markup
+* Basic accessibility guidelines
 * Media query usage instructions
 * Further elements / components to be added to style guide
 
