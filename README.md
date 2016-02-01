@@ -12,16 +12,15 @@ Site Boilerplate (for IE 9 and upwards) utilizing the following principles:
 * Sass error catching to prevent watch task falling over
 * Browsersync for faster development, easier multi browser / device testing
 * Image compression
-* NPM / Gulp friendly gitignore
 * Pre-set font size management
 * Basic responsive grid
-* Living style guide
+* Living style guide / patternlab
 
 ### Updates coming soon
 * Accessibility information and markup
 * Media query usage instructions
 
-Brad Frost's Atomic Design and Harry Robert's CSSGuidlines / ITCSS share the same approach in that they begin will simple elements / atoms and building up to complex groups of elements / molecules. This works in favor of the cascade as it reduces CSS specificity issues.
+Brad Frost's Atomic Design and Harry Robert's CSSGuidlines / ITCSS share the same fundamental approach - begin with simple elements / atoms and building up to complex groups of elements / molecules. This works in favor of the cascade and reduces CSS specificity issues.
 
 ###Further Reading
 Harry Roberts and Brad Frost have strongly influenced the guidelines set out below and I highly recommend giving them a read.
@@ -46,7 +45,7 @@ Component based CSS keeps the code clean and modular. A BEM approach would be li
 	.car__wheel {}
 	.car__door {}
 ```
-When looking at both the HTML markup and the CSS it's often clear where and what the parent is. So it is acceptable to not reference the parent name in the child element class names. Instead we can use nesting for child elements when working with clear CSS component:
+When looking at both the HTML markup and the CSS it's often clear where and what the parent is. So it is acceptable to not reference the parent name in the child element class names. Instead we can use nesting for child elements when working with clear CSS components:
 ```
 .car {
 	.wheel {}
