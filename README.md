@@ -159,9 +159,10 @@ Section subtitles listed as:
 ### Sematics
 Use appropriate semantic elements where possible. Further reading here - [Mozilla Developer Network - HTML element reference](https://developer.mozilla.org/en/docs/Web/HTML/Element)
 
-3 spaces before modifiers for readability:   
-```<div class="modal   modal--small"></div>```   
-Modifiers come last within the class name list.
+3 spaces before modifiers for readability, and odifiers come last within the class name list:   
+```
+<div class="modal   modal--small"></div>
+```   
 
 ####Meaningful use of white space
 >As with our rulesets, it is possible to use meaningful whitespace in your HTML. You can denote thematic breaks in content with five (5) empty lines, for example:
