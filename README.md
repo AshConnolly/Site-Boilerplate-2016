@@ -19,6 +19,7 @@ Site Boilerplate (for IE 9 and upwards) utilizing the following principles:
 ### Updates coming soon
 * Accessibility information and markup
 * Media query usage instructions
+* Further elements / components to be added to style guide
 
 Brad Frost's Atomic Design and Harry Robert's CSSGuidlines / ITCSS share the same fundamental approach - begin with simple elements / atoms and building up to complex groups of elements / molecules. This works in favor of the cascade and reduces CSS specificity issues.
 
