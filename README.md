@@ -97,7 +97,7 @@ Here we can see that the .nav class is meant to be used on a ul element, and not
 
 All javascript hooks should be prefixed with 'js_'. for example:   
 ```
-<a class="btn js_open_modal"></a>
+<button class="btn js_open_modal"></button>
 ```
 
 Toggle classes for state changes. Do not toggle data attributes for state changes:
@@ -163,7 +163,7 @@ Section subtitles listed as:
 ###HTML Markup
 
 ### Sematics
-Use appropriate semantic elements where possible. Further reading here - [Mozilla Developer Network - HTML element reference](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+Use appropriate semantic elements where possible. If unfamiliar with semantic HTML please see here - [HTML5 Semantics – Smashing Magazine](https://www.smashingmagazine.com/2011/11/html5-semantics/)
 
 3 spaces before modifiers for readability, and odifiers come last within the class name list:   
 ```
