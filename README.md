@@ -47,7 +47,7 @@ Component based CSS keeps the code clean and modular. A BEM approach would be li
 	.car__door {}
 ```
 When looking at both the HTML markup and the CSS it's often clear where and what the parent is. So it is acceptable to not reference the parent name in the child element class names. Instead we can use nesting for child elements when working with clear CSS component:
-```
+```css
 .car {
 	.wheel {}
 	.door {}
@@ -87,9 +87,10 @@ IDs have the highest specificity of any CSS selector and as a result they cause 
 Sometimes developers will add an ID to an element for the sole purpose of referencing the ID in javascript. However this isnt neccessary, instead use a class and reference the element using getElementsByClassName("class_name")[0]; (note 'ClassName' is beneficial over 'ClassList' due to it's wider browser support).
 
 ###Quasi-Qualified Selectors
->`ul.nav {}`
+>`css ul.nav {}`
 Here we can see that the .nav class is meant to be used on a ul element, and not on a nav. By using quasi-qualified selectors we can still provide that information without actually qualifying the selector    
-`/*ul*/.nav {}`
+`css
+/*ul*/.nav {}`
 
 ###Javascipt hooks 
 
