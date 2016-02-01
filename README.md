@@ -26,7 +26,7 @@ Brad Frost's Atomic Design and Harry Robert's CSSGuidlines / ITCSS share the sam
 ###Further Reading
 Harry Roberts and Brad Frost have strongly influenced the guidelines set out below and I highly recommend giving them a read.
 * [Harry Roberts - MindBEMding – getting your head ’round BEM syntax](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
-* [CSS guidelines Harry Roberts](http://cssguidelin.es/) 
+* [Harry Roberts - CSS guidelines](http://cssguidelin.es/) 
 * [Brad Frost - Atomic Design](https://vimeo.com/67476280)
 
 #Front End Guidelines
