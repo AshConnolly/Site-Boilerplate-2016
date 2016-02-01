@@ -41,13 +41,13 @@ The CSS should aim to be object orientated to create reusable, flexible classes 
 
 ###Components
 Component based CSS keeps the code clean and modular. A BEM approach would be like this, note repeated parent class name and lack of nesting:
-```css
+```
 .car {}
 	.car__wheel {}
 	.car__door {}
 ```
 When looking at both the HTML markup and the CSS it's often clear where and what the parent is. So it is acceptable to not reference the parent name in the child element class names. Instead we can use nesting for child elements when working with clear CSS component:
-```css
+```
 .car {
 	.wheel {}
 	.door {}
@@ -64,7 +64,7 @@ Classe names are all lower case and use underscores for spacing:
 ```<header class="site_header"></header>```
 
 **Modifier classes** use the element's class name with an added double hyphen followed by the modifier name. Use 3 spaces before modifiers for readability and modifier class names come last within the class list.:   
-```html
+```
 <div class="modal   modal--small"></div>
 ```
 
@@ -87,10 +87,9 @@ IDs have the highest specificity of any CSS selector and as a result they cause 
 Sometimes developers will add an ID to an element for the sole purpose of referencing the ID in javascript. However this isnt neccessary, instead use a class and reference the element using getElementsByClassName("class_name")[0]; (note 'ClassName' is beneficial over 'ClassList' due to it's wider browser support).
 
 ###Quasi-Qualified Selectors
->`css ul.nav {}`
+>`ul.nav {}`
 Here we can see that the .nav class is meant to be used on a ul element, and not on a nav. By using quasi-qualified selectors we can still provide that information without actually qualifying the selector    
-`css
-/*ul*/.nav {}`
+`/*ul*/.nav {}`
 
 ###Javascipt hooks 
 
