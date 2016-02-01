@@ -41,7 +41,7 @@ The CSS should aim to be object orientated to create reusable, flexible classes 
 
 ###Components
 Component based CSS keeps the code clean and modular. A BEM approach would be like this, note repeated parent class name and lack of nesting:
-```
+```css
 .car {}
 	.car__wheel {}
 	.car__door {}
@@ -63,12 +63,11 @@ BEM approach encourages having a unique class for every element, keeping all ele
 Classe names are all lower case and use underscores for spacing:   
 ```<header class="site_header"></header>```
 
-**Modifier classes** use the element's class name with an added double hyphen, followed by the modifier name:   
-```<div class="modal   modal--small"></div>```
+**Modifier classes** use the element's class name with an added double hyphen followed by the modifier name. Use 3 spaces before modifiers for readability and modifier class names come last within the class list.:   
+```html
+<div class="modal   modal--small"></div>
+```
 
-3 spaces before modifiers for readability:   
-```<div class="modal   modal--small"></div>```   
-Modifiers come last within the class name list.
 
 ### Context vs component / element styles
 Implementation styles are based on context, visual styles are based on component / element.
