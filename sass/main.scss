@@ -1,13 +1,9 @@
 /**
  * CONTENTS
  *
- * SETTINGS
- * Global...............Globally-available variables and config.
- * * Gloablly availible settings. Config switches. Brand colors etc
- *
- * TOOLS
- * Mixins...............Useful mixins.
- * * Globally availible tools. Public mixins. Helper functions.
+ * GLOBAL
+ * Global...............Globally-available variables, mixins and config.
+ * * Gloablly availible settings. Config switches. Brand colors, mixins etc
  *
  * GENERIC
  * Normalize.css........A level playing field.
@@ -37,23 +33,17 @@
  * * affect one piece of the DOM at a time
  * * usually carry important
  */
-
+ 
 /*------------------------------------*\ 
-    SETTINGS - Global variables and config
+    Global - Global variables, mixins and config
 \*------------------------------------*/
-@import "partials/_settings.scss";
-
-/*------------------------------------*\ 
-    TOOLS - Mixins
-\*------------------------------------*/
-@import "partials/_mixins.scss";
+@import "partials/_global.scss";
 
 /*------------------------------------*\ 
     GENERIC - Normalize, resets
 \*------------------------------------*/
 @import "partials/_normalize.scss";
 @import "partials/_generic.scss";
-@import "partials/_gridSystem.scss";
 @import "partials/_animation.scss";
 
 /*------------------------------------*\ 
@@ -66,6 +56,7 @@
     OBEJCTS - Wrappers and constraining elements
 \*------------------------------------*/
 @import "partials/_objects.scss";
+@import "partials/_gridSystem.scss";
 
 /*------------------------------------*\ 
     COMPONENTS

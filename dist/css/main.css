@@ -2,13 +2,9 @@
 /**
  * CONTENTS
  *
- * SETTINGS
- * Global...............Globally-available variables and config.
- * * Gloablly availible settings. Config switches. Brand colors etc
- *
- * TOOLS
- * Mixins...............Useful mixins.
- * * Globally availible tools. Public mixins. Helper functions.
+ * GLOBAL
+ * Global...............Globally-available variables, mixins and config.
+ * * Gloablly availible settings. Config switches. Brand colors, mixins etc
  *
  * GENERIC
  * Normalize.css........A level playing field.
@@ -39,14 +35,11 @@
  * * usually carry important
  */
 /*------------------------------------*\ 
-    SETTINGS - Global variables and config
+    Global - Global variables, mixins and config
 \*------------------------------------*/
 :selection {
   background: #F0B981; }
 
-/*------------------------------------*\ 
-    TOOLS - Mixins
-\*------------------------------------*/
 /*------------------------------------*\ 
     GENERIC - Normalize, resets
 \*------------------------------------*/
@@ -241,94 +234,6 @@ input[type=texarea], input[type=text] {
 .clear {
   clear: both; }
 
-/* Attribute selector */
-[class*='bit-'] {
-  float: left;
-  padding: 2.2rem; }
-
-/* Floats last ".bit-" to the right */
-[class*='bit-']:last-of-type {
-  padding-right: 2.2rem;
-  float: right; }
-
-.row {
-  margin-left: -2.2rem;
-  margin-right: -2.2rem;
-  /* width fix */ }
-
-/* Clearfix */
-.row:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.bit-100 {
-  width: 100%; }
-
-.bit-75 {
-  width: 75%; }
-
-.bit-66 {
-  width: 66%; }
-
-.bit-60 {
-  width: 60%; }
-
-.bit-50 {
-  width: 50%; }
-
-.bit-40 {
-  width: 40%; }
-
-.bit-33 {
-  width: 33%; }
-
-.bit-25 {
-  width: 25%; }
-
-.bit-20 {
-  width: 20%; }
-
-@media only screen and (max-width: 700px) {
-  .bit-100 {
-    width: 100%; }
-  .bit-75 {
-    width: 100%; }
-  .bit-66 {
-    width: 66%; }
-  .bit-60 {
-    width: 60%; }
-  .bit-50 {
-    width: 50%; }
-  .bit-40 {
-    width: 40%; }
-  .bit-33 {
-    width: 33%; }
-  .bit-25 {
-    width: 50%; }
-  .bit-20 {
-    width: 100%; } }
-
-@media only screen and (max-width: 600px) {
-  .bit-100 {
-    width: 100%; }
-  .bit-75 {
-    width: 100%; }
-  .bit-66 {
-    width: 100%; }
-  .bit-60 {
-    width: 100%; }
-  .bit-50 {
-    width: 100%; }
-  .bit-40 {
-    width: 100%; }
-  .bit-33 {
-    width: 100%; }
-  .bit-25 {
-    width: 100%; }
-  .bit-20 {
-    width: 100%; } }
-
 .animate, .btn {
   transition: all 0.3s ease-in-out; }
 
@@ -466,6 +371,94 @@ label[type=text] {
   max-width: 978px;
   margin-right: auto;
   margin-left: auto; }
+
+/* Attribute selector */
+[class*='bit-'] {
+  float: left;
+  padding: 2.2rem; }
+
+/* Floats last ".bit-" to the right */
+[class*='bit-']:last-of-type {
+  padding-right: 2.2rem;
+  float: right; }
+
+.row {
+  margin-left: -2.2rem;
+  margin-right: -2.2rem;
+  /* width fix */ }
+
+/* Clearfix */
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.bit-100 {
+  width: 100%; }
+
+.bit-75 {
+  width: 75%; }
+
+.bit-66 {
+  width: 66%; }
+
+.bit-60 {
+  width: 60%; }
+
+.bit-50 {
+  width: 50%; }
+
+.bit-40 {
+  width: 40%; }
+
+.bit-33 {
+  width: 33%; }
+
+.bit-25 {
+  width: 25%; }
+
+.bit-20 {
+  width: 20%; }
+
+@media only screen and (max-width: 700px) {
+  .bit-100 {
+    width: 100%; }
+  .bit-75 {
+    width: 100%; }
+  .bit-66 {
+    width: 66%; }
+  .bit-60 {
+    width: 60%; }
+  .bit-50 {
+    width: 50%; }
+  .bit-40 {
+    width: 40%; }
+  .bit-33 {
+    width: 33%; }
+  .bit-25 {
+    width: 50%; }
+  .bit-20 {
+    width: 100%; } }
+
+@media only screen and (max-width: 600px) {
+  .bit-100 {
+    width: 100%; }
+  .bit-75 {
+    width: 100%; }
+  .bit-66 {
+    width: 100%; }
+  .bit-60 {
+    width: 100%; }
+  .bit-50 {
+    width: 100%; }
+  .bit-40 {
+    width: 100%; }
+  .bit-33 {
+    width: 100%; }
+  .bit-25 {
+    width: 100%; }
+  .bit-20 {
+    width: 100%; } }
 
 /*------------------------------------*\ 
     COMPONENTS

@@ -17,7 +17,7 @@ body {font: 16px/1.5 sans-serif;font-size: 1.6rem;color:rgb(120,120,120);}
 
 //normalize resets + set global font color
 h1,h2,h3,h4,h5,p,li,blockquote,a,ul,ol {margin: 0;}
-h1,h2,h3,h4,h5 {color:grey;}
+h1,h2,h3,h4,h5 {color:grey;line-height: 1.1rem;}
 
 h1,.h1 {font-size: 2.8rem;}
 h2,.h2 {font-size: 2.6rem;}
@@ -25,14 +25,14 @@ h3,.h3 {font-size: 2.2rem}
 h4,.h4 {font-size: 2rem}
 h5,.h5 {font-size: 1.8rem}
 
-p a {text-decoration: underline;color: $color1;}
+p a,li a {text-decoration: underline;color: $color1;}
 
 ol {list-style-position: inside; list-style: disc;}
 ol li {line-height: 2rem;
 	ol {margin-left: 1rem; margin-bottom: 0;}
 }
 
-/*ul*/.datalist {list-style-position: inside;list-style-type: disc;margin-top: 0;
+/*ul*/.ui_list {list-style-position: inside;list-style-type: disc;margin-top: 0;
  li {line-height: 2.5rem;
 	ul {margin-left: 1rem; margin-bottom: 0;}
 }
