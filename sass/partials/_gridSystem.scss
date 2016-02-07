@@ -1,76 +1,74 @@
 //Grid System
 
-/* Attribute selector */
-
 $gutter: 2.2rem;
-[class*='bit-'] { float: left; padding: $gutter; }
+[class*='bit_'] { float: left; padding: $gutter; }
 
-/* Floats last ".bit-" to the right */
-[class*='bit-']:last-of-type { padding-right: $gutter; float: right; }
-.row { margin-left: -$gutter; margin-right: -$gutter; /* width fix */ }
+/* Floats last ".bit_" to the right */
+/* [class*='bit_']:last-of-type { padding-right: $gutter; float: right; }
+ */.row { margin-left: -$gutter; margin-right: -$gutter; /* width fix */ }
 
 /* Clearfix */
 .row:after { content: ""; display: table; clear: both; }
-.bit-100 { width: 100% }
-.bit-75 { width: 75% }
-.bit-66 { width: 66% }
-.bit-60 { width: 60% }
-.bit-50 { width: 50% }
-.bit-40 { width: 40% }
-.bit-33 { width: 33% }
-.bit-25 { width: 25% }
-.bit-20 { width: 20% }
-@media only screen and (max-width:700px) {
+.bit_100 { width: 100% }
+.bit_75 { width: 75% }
+.bit_66 { width: 66% }
+.bit_60 { width: 60% }
+.bit_50 { width: 50% }
+.bit_40 { width: 40% }
+.bit_33 { width: 33% }
+.bit_25 { width: 25% }
+.bit_20 { width: 20% }
+@media only screen and (max-width:800px) {
 		// 60, 50, 40 and 33 get thier widths
-		.bit-100 { width: 100% }
-		.bit-75 { width: 100% }
-		.bit-66 { width: 66% }
-		.bit-60 { width: 60% }
-		.bit-50 { width: 50% }
-		.bit-40 { width: 40% }
-		.bit-33 { width: 33% }
-		.bit-25 { width: 50% }
-		.bit-20 { width: 100% }
+		.bit_100 { width: 100% }
+		.bit_75 { width: 100% }
+		.bit_66 { width: 66% }
+		.bit_60 { width: 60% }
+		.bit_50 { width: 50% }
+		.bit_40 { width: 40% }
+		.bit_33 { width: 33% }
+		.bit_25 { width: 50% }
+		.bit_20 { width: 100% }
 }
 @media only screen and (max-width:600px) {
 		// 20, 25, 75 get their widths
-		.bit-100 { width: 100% }
-		.bit-75 { width: 100% }
-		.bit-66 { width: 100% }
-		.bit-60 { width: 100% }
-		.bit-50 { width: 100% }
-		.bit-40 { width: 100% }
-		.bit-33 { width: 100% }
-		.bit-25 { width: 100% }
-		.bit-20 { width: 100% }
+		.bit_100 { width: 100% }
+		.bit_75 { width: 100% }
+		.bit_66 { width: 100% }
+		.bit_60 { width: 100% }
+		.bit_50 { width: 100% }
+		.bit_40 { width: 100% }
+		.bit_33 { width: 100% }
+		.bit_25 { width: 100% }
+		.bit_20 { width: 100% }
 }
-// .bit-100 { width: 100% }
-// .bit-75 { width: 100% }
-// .bit-60 { width: 100% }
-// .bit-50 { width: 100% }
-// .bit-40 { width: 100% }
-// .bit-33 { width: 100% }
-// .bit-25 { width: 100% }
-// .bit-20 { width: 100% }
+// .bit_100 { width: 100% }
+// .bit_75 { width: 100% }
+// .bit_60 { width: 100% }
+// .bit_50 { width: 100% }
+// .bit_40 { width: 100% }
+// .bit_33 { width: 100% }
+// .bit_25 { width: 100% }
+// .bit_20 { width: 100% }
 // @media only screen and (min-width:600px) {
 		// // 60, 50, 40 and 33 get thier widths
-		// .bit-100 { width: 100% }
-		// .bit-75 { width: 100% }
-		// .bit-60 { width: 60% }
-		// .bit-50 { width: 50% }
-		// .bit-40 { width: 40% }
-		// .bit-33 { width: 33% }
-		// .bit-25 { width: 25% }
-		// .bit-20 { width: 100% }
+		// .bit_100 { width: 100% }
+		// .bit_75 { width: 100% }
+		// .bit_60 { width: 60% }
+		// .bit_50 { width: 50% }
+		// .bit_40 { width: 40% }
+		// .bit_33 { width: 33% }
+		// .bit_25 { width: 25% }
+		// .bit_20 { width: 100% }
 // }
 // @media only screen and (min-width:700px) {
 		// // 20, 25, 75 get their widths
-		// .bit-100 { width: 100% }
-		// .bit-75 { width: 75% }
-		// .bit-60 { width: 60% }
-		// .bit-50 { width: 50% }
-		// .bit-40 { width: 40% }
-		// .bit-33 { width: 33% }
-		// .bit-25 { width: 25% }
-		// .bit-20 { width: 20% }
+		// .bit_100 { width: 100% }
+		// .bit_75 { width: 75% }
+		// .bit_60 { width: 60% }
+		// .bit_50 { width: 50% }
+		// .bit_40 { width: 40% }
+		// .bit_33 { width: 33% }
+		// .bit_25 { width: 25% }
+		// .bit_20 { width: 20% }
 // }

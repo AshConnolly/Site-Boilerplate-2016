@@ -20,6 +20,7 @@ Site Boilerplate (for IE 9 and upwards) utilizing the following principles:
 * Basic accessibility guidelines
 * Media query usage instructions
 * Further elements / components to be added to style guide
+* New grid system - susy / neat
 
 Brad Frost's Atomic Design and Harry Robert's CSSGuidlines / ITCSS share the same fundamental approach - begin with simple elements / atoms and building up to complex groups of elements / molecules. This works in favor of the cascade and reduces CSS specificity issues.
 
@@ -109,41 +110,37 @@ Toggle classes for state changes. Do not toggle data attributes for state change
 /**
  * CONTENTS
  *
- * SETTINGS
- * Global...............Globally-available variables and config.
- * * Gloablly availible settings. Config switches. Brand colors etc
- *
- * TOOLS
- * Mixins...............Useful mixins.
- * * Globally availible tools. Public mixins. Helper functions.
+ * GLOBAL
+ * Global...............Globally-available variables, mixins and config.
+ * Gloablly availible settings. Config switches. Brand colors, mixins etc
  *
  * GENERIC
  * Normalize.css........A level playing field.
  * Box-sizing...........Better default `box-sizing`.
- * * Ground zero styles. Low specificty. Far-reaching. Resets, noramlize etc
+ * Ground zero styles. Low specificty. Far-reaching. Resets, noramlize etc
  *
  * BASE
  * Headings.............H1–H6 styles.
- * * unclassed HTML elements - ul, p, a, buttons, input, textarea, select, blockquote,
+ * unclassed HTML elements - ul, p, a, buttons, input, textarea, select, blockquote,
  *
  * OBJECTS
  * Wrappers.............Wrapping and constraining elements.
- * * OOCSS. Design patterns. No cosmetics. Begin using classes exclusively. Agnostically named (eg ui_list)
+ * OOCSS. Design patterns. No cosmetics. Begin using classes exclusively. Agnostically named (eg ui_list)
  *
  * COMPONENTS
  * Page-head............The main page header.
  * Page-foot............The main page footer.
  * Buttons..............Button elements.
- * * Designed pieces of UI. Still only using classes. Explicitly named.
+ * Designed pieces of UI. Still only using classes. Explicitly named.
  *
  * Optional - Theme Layer 
  * Optional - A/B Test layer
  *
  * TRUMPS
  * Text.................Text helpers.
- * * overides, utiliies and helpers, 
- * * affect one piece of the DOM at a time
- * * usually carry important
+ * overides, utiliies and helpers, 
+ * affect one piece of the DOM at a time
+ * usually carry important
  */
  ```
 

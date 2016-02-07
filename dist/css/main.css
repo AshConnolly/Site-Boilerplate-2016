@@ -185,9 +185,7 @@ table {
 td, th {
   padding: 0; }
 
-html, body {
-  height: 100%; }
-
+/* html, body { height: 100% } */
 body {
   margin: 0;
   padding: 0;
@@ -258,13 +256,13 @@ html {
 body {
   font: 16px/1.5 sans-serif;
   font-size: 1.6rem;
-  color: #787878; }
+  color: #505050; }
 
 h1, h2, h3, h4, h5, p, li, blockquote, a, ul, ol {
   margin: 0; }
 
 h1, h2, h3, h4, h5 {
-  color: grey; }
+  line-height: 1.1rem; }
 
 h1, .h1 {
   font-size: 2.8rem; }
@@ -281,7 +279,7 @@ h4, .h4 {
 h5, .h5 {
   font-size: 1.8rem; }
 
-p a {
+p a, li a {
   text-decoration: underline;
   color: #26C57F; }
 
@@ -296,13 +294,13 @@ ol li {
     margin-bottom: 0; }
 
 /*ul*/
-.datalist {
+.ui_list {
   list-style-position: inside;
   list-style-type: disc;
   margin-top: 0; }
-  .datalist li {
+  .ui_list li {
     line-height: 2.5rem; }
-    .datalist li ul {
+    .ui_list li ul {
       margin-left: 1rem;
       margin-bottom: 0; }
 
@@ -372,16 +370,13 @@ label[type=text] {
   margin-right: auto;
   margin-left: auto; }
 
-/* Attribute selector */
-[class*='bit-'] {
+[class*='bit_'] {
   float: left;
   padding: 2.2rem; }
 
-/* Floats last ".bit-" to the right */
-[class*='bit-']:last-of-type {
-  padding-right: 2.2rem;
-  float: right; }
-
+/* Floats last ".bit_" to the right */
+/* [class*='bit_']:last-of-type { padding-right: $gutter; float: right; }
+ */
 .row {
   margin-left: -2.2rem;
   margin-right: -2.2rem;
@@ -393,71 +388,71 @@ label[type=text] {
   display: table;
   clear: both; }
 
-.bit-100 {
+.bit_100 {
   width: 100%; }
 
-.bit-75 {
+.bit_75 {
   width: 75%; }
 
-.bit-66 {
+.bit_66 {
   width: 66%; }
 
-.bit-60 {
+.bit_60 {
   width: 60%; }
 
-.bit-50 {
+.bit_50 {
   width: 50%; }
 
-.bit-40 {
+.bit_40 {
   width: 40%; }
 
-.bit-33 {
+.bit_33 {
   width: 33%; }
 
-.bit-25 {
+.bit_25 {
   width: 25%; }
 
-.bit-20 {
+.bit_20 {
   width: 20%; }
 
-@media only screen and (max-width: 700px) {
-  .bit-100 {
+@media only screen and (max-width: 800px) {
+  .bit_100 {
     width: 100%; }
-  .bit-75 {
+  .bit_75 {
     width: 100%; }
-  .bit-66 {
+  .bit_66 {
     width: 66%; }
-  .bit-60 {
+  .bit_60 {
     width: 60%; }
-  .bit-50 {
+  .bit_50 {
     width: 50%; }
-  .bit-40 {
+  .bit_40 {
     width: 40%; }
-  .bit-33 {
+  .bit_33 {
     width: 33%; }
-  .bit-25 {
+  .bit_25 {
     width: 50%; }
-  .bit-20 {
+  .bit_20 {
     width: 100%; } }
 
 @media only screen and (max-width: 600px) {
-  .bit-100 {
+  .bit_100 {
     width: 100%; }
-  .bit-75 {
+  .bit_75 {
     width: 100%; }
-  .bit-66 {
+  .bit_66 {
     width: 100%; }
-  .bit-60 {
+  .bit_60 {
     width: 100%; }
-  .bit-50 {
+  .bit_50 {
     width: 100%; }
-  .bit-40 {
+  .bit_40 {
     width: 100%; }
-  .bit-33 {
+  .bit_33 {
     width: 100%; }
-  .bit-25 {
+  .bit_25 {
     width: 100%; }
-  .bit-20 {
+  .bit_20 {
     width: 100%; } }
 
 /*------------------------------------*\ 

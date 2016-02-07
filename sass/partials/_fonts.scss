@@ -13,11 +13,11 @@
 html{font-size: 62.5%;}
 
 //IE9 + 10 doesnt like shorthand font delcrations with rems
-body {font: 16px/1.5 sans-serif;font-size: 1.6rem;color:rgb(120,120,120);}
+body {font: 16px/1.5 sans-serif;font-size: 1.6rem;color:rgb(80,80,80);}
 
 //normalize resets + set global font color
 h1,h2,h3,h4,h5,p,li,blockquote,a,ul,ol {margin: 0;}
-h1,h2,h3,h4,h5 {color:grey;line-height: 1.1rem;}
+h1,h2,h3,h4,h5 {line-height: 1.1rem;}
 
 h1,.h1 {font-size: 2.8rem;}
 h2,.h2 {font-size: 2.6rem;}
