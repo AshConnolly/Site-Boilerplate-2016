@@ -15,3 +15,6 @@ input[type=texarea], input[type=text] { -webkit-appearance: none; -webkit-border
 .cf:before, .cf:after { content: " "; display: table; }
 .cf:after { clear: both; }
 .clear { clear: both; }
+
+/* ios default input styling removal */
+input[type="text"],button { appearance: none; border-radius: 0; border:none; }

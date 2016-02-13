@@ -1,3 +1,26 @@
+/*----------- Variables -------------*/
 $color1:#26C57F; 
 $color2:#F39E9E;
-:selection { background: #F0B981; }
+::selection { background: #F0B981; }
+
+/*----------- Mixins -------------*/
+
+@mixin placeholder() {
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    @content
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+@content
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+@content
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ @content
+}
+:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+ @content
+}
+}
+
+

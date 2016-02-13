@@ -18,6 +18,15 @@ footer,
 footer { background: grey; padding: 3rem; }
 footer p { color: #ffffff }
 
+/*-----------buttons-------------*/
+.btn { @extend .animate; color: white; background: $color1; padding: 1rem 2rem; border: 1px solid $color1; display: inline-block; border-radius: 4px;
+		&:hover { color: $color1; background: white; border-color: $color1; transform: translate3d(0, -5px, 0); box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2); }
+		&.btn--secondary { color: $color1; background: white; border: 1px solid $color1;
+				&:hover { color: white; background: $color1; }
+		}
+}
+
+
 /*----------------- Mobile menu - needs rebuilding - old code -------------------*/
 .mobile-menu-panel { margin-bottom: 0 }
 .mobile-menu-p { margin: 0 }
@@ -26,8 +35,8 @@ nav ul { list-style-type: none; margin-bottom: 0; margin-top: 0; padding: 0; @ex
 nav ul li { float: left; }
 nav ul li a { background: white; color: $color1; border-bottom: 1px solid white; }
 nav ul li a:hover { background: $color1; color: white; }
-nav ul li a { padding: 15px 20px 15px 20px; display: block; }
-nav ul li ul li a { padding: 15px 20px 15px 40px; }
+nav ul li a { padding: 15px 20px 15px 20px; display: block; text-decoration: none;}
+nav ul li ul li a { padding: 15px 20px 15px 40px; text-decoration: none;}
 nav ul li { display: block; float: none; }
 nav { width: 100%; display: none; z-index: 1; }
 

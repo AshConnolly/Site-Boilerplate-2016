@@ -37,9 +37,13 @@
 /*------------------------------------*\ 
     Global - Global variables, mixins and config
 \*------------------------------------*/
-:selection {
+/*----------- Variables -------------*/
+::-moz-selection {
+  background: #F0B981; }
+::selection {
   background: #F0B981; }
 
+/*----------- Mixins -------------*/
 /*------------------------------------*\ 
     GENERIC - Normalize, resets
 \*------------------------------------*/
@@ -232,6 +236,14 @@ input[type=texarea], input[type=text] {
 .clear {
   clear: both; }
 
+/* ios default input styling removal */
+input[type="text"], button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+  border: none; }
+
 .animate, .btn {
   transition: all 0.3s ease-in-out; }
 
@@ -262,7 +274,7 @@ h1, h2, h3, h4, h5, p, li, blockquote, a, ul, ol {
   margin: 0; }
 
 h1, h2, h3, h4, h5 {
-  line-height: 1.1rem; }
+  line-height: 1.1; }
 
 h1, .h1 {
   font-size: 2.8rem; }
@@ -334,30 +346,11 @@ hr {
   border: none;
   display: block; }
 
-/*-----------buttons-------------*/
-.btn {
-  color: white;
-  background: #26C57F;
-  padding: 1rem 2rem;
-  border: 1px solid #26C57F;
-  display: inline-block;
-  border-radius: 4px; }
-  .btn:hover {
-    color: #26C57F;
-    background: white;
-    border-color: #26C57F;
-    -webkit-transform: translate3d(0, -5px, 0);
-            transform: translate3d(0, -5px, 0);
-    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2); }
-  .btn.btn--secondary {
-    color: #26C57F;
-    background: white;
-    border: 1px solid #26C57F; }
-    .btn.btn--secondary:hover {
-      color: white;
-      background: #26C57F; }
-
 /*-----------inputs-------------*/
+textarea, input, input[type="text"] {
+  border: 1px solid #26C57F;
+  padding: 1rem; }
+
 label[type=text] {
   display: block; }
 
@@ -495,6 +488,29 @@ footer {
 footer p {
   color: #ffffff; }
 
+/*-----------buttons-------------*/
+.btn {
+  color: white;
+  background: #26C57F;
+  padding: 1rem 2rem;
+  border: 1px solid #26C57F;
+  display: inline-block;
+  border-radius: 4px; }
+  .btn:hover {
+    color: #26C57F;
+    background: white;
+    border-color: #26C57F;
+    -webkit-transform: translate3d(0, -5px, 0);
+            transform: translate3d(0, -5px, 0);
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2); }
+  .btn.btn--secondary {
+    color: #26C57F;
+    background: white;
+    border: 1px solid #26C57F; }
+    .btn.btn--secondary:hover {
+      color: white;
+      background: #26C57F; }
+
 /*----------------- Mobile menu - needs rebuilding - old code -------------------*/
 .mobile-menu-panel {
   margin-bottom: 0; }
@@ -530,10 +546,12 @@ nav ul li a:hover {
 
 nav ul li a {
   padding: 15px 20px 15px 20px;
-  display: block; }
+  display: block;
+  text-decoration: none; }
 
 nav ul li ul li a {
-  padding: 15px 20px 15px 40px; }
+  padding: 15px 20px 15px 40px;
+  text-decoration: none; }
 
 nav ul li {
   display: block;
@@ -631,3 +649,25 @@ nav > ul > li > ul {
   .eq_dist > a, .eq_dist > p, .eq_dist > img {
     display: inline-block;
     vertical-align: middle; }
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0; }
+
+.videoWrapper iframe, .videoWrapper object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/*ul*/
+.inline_list {
+  list-style: none;
+  margin-top: 0;
+  margin-left: 0;
+  padding-left: 0; }
+  .inline_list li {
+    display: inline-block; }

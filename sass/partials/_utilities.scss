@@ -5,3 +5,22 @@
 		&:after { content: ''; width: 100%; display: inline-block; }
 		> a, >p, >img { display: inline-block; vertical-align: middle; }
 }
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+.videoWrapper iframe,.videoWrapper object {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/*ul*/.inline_list {list-style:none;margin-top: 0;margin-left: 0; padding-left: 0;
+ li { display: inline-block; 
+	ul {}
+}
+}

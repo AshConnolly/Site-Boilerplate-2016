@@ -6,14 +6,7 @@ h1, h2, h3, h4, h5, h6, p { margin: 2rem 0; }
 h1, h2, h3, h4, h5, h6 { margin-top: 4rem; }
 hr { background: #cccccc; height: 1px; border: none; display: block; }
 
-/*-----------buttons-------------*/
-.btn { @extend .animate; color: white; background: $color1; padding: 1rem 2rem; border: 1px solid $color1; display: inline-block; border-radius: 4px;
-		&:hover { color: $color1; background: white; border-color: $color1; transform: translate3d(0, -5px, 0); box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2); }
-		&.btn--secondary { color: $color1; background: white; border: 1px solid $color1;
-				&:hover { color: white; background: $color1; }
-		}
-}
 
 /*-----------inputs-------------*/
-textarea, input { }
+textarea, input,input[type="text"] {border: 1px solid $color1; padding: 1rem; }
 label[type=text] { display: block; }

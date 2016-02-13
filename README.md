@@ -157,6 +157,37 @@ Section subtitles listed as:
 /*-----------buttons-------------*/ 
 ```
 
+##CSS Components
+CSS is to be structured in modular, component based blocks. This means that all styles for individual components are kept in one place for easier edits and maintainability.
+
+```
+/*----------- Hero -------------*/
+.hero { width: 100%; height: 400px; position: relative;
+	.callout { position: absolute; right: 10%; bottom: 10%; width: 380px; height: 300px; background: #0E1E3F; color: white; overflow: hidden; padding: 2rem;
+		h2 { margin-top: 0; font-size: 4rem; color: white; }
+		p,a{font-size:2rem;}
+		p { color: yellow; font-weight: bold; margin: 1rem 0; }
+		a { color: yellow; font-weight: bold;}
+	}
+
+    /*modifiers*/ 
+    &.hero--callout_left {
+    	.callout { right: auto; left: 10%; }
+    }   
+
+    /*responsive*/ 
+    @media (max-width:830px){
+    	.callout {
+    		width:100%; right:0; left:0; bottom:0; top:auto; height:auto;
+    		h2 {font-size: 3rem; }
+    		p,a{font-size:1.8rem;}
+    		p {margin: 1rem 0; }
+    		a {}
+    	}
+    }
+}
+```
+
 ###HTML Markup
 
 ### Sematics
