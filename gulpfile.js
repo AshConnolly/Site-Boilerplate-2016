@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer')
+    autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
     concat = require('gulp-concat');
 
@@ -23,12 +23,12 @@ gulp.task('sass', function() {
 
 gulp.task('js', function() {
 
-  // set concat order to specified files then all other remaining files - 
- //return gulp.src([siteroot + 'js/bacon.js', siteroot + 'js/eggs.js', siteroot + 'js/*.js' ])
+    // set concat order to dependencies first then all other remaining files - 
+    //return gulp.src([siteroot + 'js/bacon.js', siteroot + 'js/eggs.js', siteroot + 'js/*.js' ])
 
-  return gulp.src(siteroot + 'js/**/*.js')
-    .pipe(concat('main.js'))
-    .pipe(gulp.dest('dist/js'));
+    return gulp.src(siteroot + 'js/**/*.js')
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest('dist/js'));
 });
 
 //image min - combines gifsicle, jpegtran, optipng, svgo
@@ -37,7 +37,7 @@ gulp.task('imgcomp', () => {
         .pipe(imagemin({
             optimizationLevel: 4,
             progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
+            svgoPlugins: [{ removeViewBox: false }],
             use: [pngquant()]
         }))
         .pipe(gulp.dest('dist/img'));
