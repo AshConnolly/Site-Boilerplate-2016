@@ -22,11 +22,10 @@ gulp.task('sass', function() {
 
 
 gulp.task('js', function() {
-  // set concat order to specified files then all other remaining.
-  // return gulp.src([siteroot + 'js/arem.min.js', siteroot + 'js/rem.min.js', siteroot + 'js/*.js' ])
 
-  // set concat order to specified files last, but all other files before specified ones.
-  // return gulp.src([siteroot + 'js/*.js', siteroot + 'js/arem.min.js', siteroot + 'js/rem.min.js' ])
+  // set concat order to specified files then all other remaining files - 
+ //return gulp.src([siteroot + 'js/bacon.js', siteroot + 'js/eggs.js', siteroot + 'js/*.js' ])
+
   return gulp.src(siteroot + 'js/**/*.js')
     .pipe(concat('main.js'))
     .pipe(gulp.dest('dist/js'));
