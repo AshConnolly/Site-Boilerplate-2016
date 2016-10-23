@@ -1,4 +1,9 @@
 /*======== utility classes =========*/
+/* Clearfix http:/nicolasgallagher.com/micro-clearfix-hack/ */
+.cf:before, .cf:after { content: " "; display: table; }
+.cf:after { clear: both; }
+.clear { clear: both; }
+
 .abcenter { overflow: auto; margin: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
 .vert_center { position: absolute; top: 50%; transform: translateY(-50%); }
 .eq_dist { text-align: justify;

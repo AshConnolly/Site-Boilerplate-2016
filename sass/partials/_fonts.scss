@@ -12,6 +12,13 @@
 
 html{font-size: 62.5%;}
 
+/*mixins for cleaner font managment*/
+// @mixin opensansreg {font-family: 'Open Sans', sans-serif; font-weight:400; }
+// @mixin opensansbold {font-family: 'Open Sans', sans-serif;  font-weight:700;}
+// @mixin opensansitalic {font-family: 'Open Sans', sans-serif;  font-weight:400; font-style:italic;}
+// @mixin opensanslight {font-family: 'Open Sans', sans-serif;  font-weight:300;}
+// @mixin georgia {font-family: Georgia, sans-serif; -webkit-font-smoothing:antialiased; }
+
 //IE9 + 10 doesnt like shorthand font delcrations with rems
 body {font: 16px/1.5 sans-serif;font-size: 1.6rem;color:rgb(80,80,80);}
 
@@ -19,12 +26,33 @@ body {font: 16px/1.5 sans-serif;font-size: 1.6rem;color:rgb(80,80,80);}
 h1,h2,h3,h4,h5,p,li,blockquote,a,ul,ol {margin: 0;}
 h1,h2,h3,h4,h5 {line-height: 1.1;}
 
-h1,.h1 {font-size: 2.8rem;}
-h2,.h2 {font-size: 2.6rem;}
-h3,.h3 {font-size: 2.2rem}
-h4,.h4 {font-size: 2rem}
-h5,.h5 {font-size: 1.8rem}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    @include opensansbold;
+    text-transform: uppercase;
+    line-height: 0.92;
+}
 
+h1, .h1 {
+    font-size: 9rem;
+    @include bp(1024) { font-size: 7rem; }
+    @include bp(750) { font-size: 5rem; }
+}
+
+h2, .h2 {
+    font-size: 6rem;
+    @include bp(750) { font-size: 5rem; }
+}
+
+h3, .h3 {
+    font-size: 3.8rem;
+    @include bp(750) { font-size: 3.6rem; }
+}
+
+h4, .h4 { font-size: 2.4rem; }
+h5, .h5 { font-size: 2.4rem; }
+h6, .h6 { font-size: 2.2rem; }
+
+a { color: $color1; }
 p a,li a {text-decoration: underline;color: $color1;}
 
 ol {list-style-position: inside; list-style: disc;}

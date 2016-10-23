@@ -1,13 +1,35 @@
 /*-------- patternlab specific style ----------*/
 .colorguideblock { height: 10rem; background: rgb(140, 100, 180) }
 
-/*-----------header-------------*/
-.site_header { background: $color1; padding: 3rem; @extend .cf;
+
+
+
+/*
+z-index listing
+10 -
+20 -
+30 - 
+40 -
+50 - site_header
+60 -
+70 - 
+80 - 
+90 - 
+100 -
+*/
+
+
+/*------------------------------------*\
+    ##HEADER
+\*------------------------------------*/
+.site_header { background: $color1; padding: 3rem; @extend .cf; z-index:50;
 		@media (max-width:600px) {
 		padding: 0; }
 }
 
-/*-----------Footer-------------*/
+/*------------------------------------*\
+    ##FOOTER
+\*------------------------------------*/
 .site_footer { background: $color1; }
 .page-wrap { min-height: 100%;	/* equal to footer height */ margin-bottom: -142px; }
 .page-wrap:after { content: ""; display: block; }
@@ -18,7 +40,9 @@ footer,
 footer { background: grey; padding: 3rem; }
 footer p { color: #ffffff }
 
-/*-----------buttons-------------*/
+/*------------------------------------*\
+    ##BUTTONS
+\*------------------------------------*/
 .btn { @extend .animate; color: white; background: $color1; padding: 1rem 2rem; border: 1px solid $color1; display: inline-block; border-radius: 4px;
 		&:hover { color: $color1; background: white; border-color: $color1; transform: translate3d(0, -5px, 0); box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2); }
 		&.btn--secondary { color: $color1; background: white; border: 1px solid $color1;
