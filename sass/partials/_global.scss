@@ -52,6 +52,12 @@ $color2:#F39E9E;
     li{display:inline-block;  }
 }
 
+@mixin animateProp($args...) {
+    transition-property: $args;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;    
+}
+
 @mixin visually-hidden {
  margin: -1px;
  padding: 0;
